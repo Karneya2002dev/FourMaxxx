@@ -33,17 +33,22 @@ const HeroSection = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-teal-900/40 backdrop-blur-sm -z-10"></div>
+      <div className="absolute inset-0  backdrop-blur-sm -z-10"></div>
 
       {/* Content */}
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between relative z-10">
         {/* Left Content */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center lg:text-left max-w-lg p-8 rounded-2xl bg-teal-500/20 backdrop-blur-md shadow-lg border border-white/20"
-        >
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-center lg:text-left max-w-lg p-8 rounded-2xl"
+  style={{
+    backgroundColor: "rgba(14, 142, 226, 0.4)", // #0E8EE2 with 20% opacity
+    backdropFilter: "blur(8px)",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+    border: "1px solid rgba(255,255,255,0.2)"
+  }} >
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
             Empower Your <br /> Healthcare Journey
           </h1>
@@ -77,7 +82,7 @@ const HeroSection = () => {
           className="relative flex justify-center lg:justify-end mb-10 lg:mb-0"
         >
           {/* Pulsating Rings */}
-          <motion.div
+          {/* <motion.div
             className="absolute w-[450px] h-[450px] rounded-full border-4 border-cyan-400/40 -z-20"
             animate={{
               scale: [1, 1.15, 1],
@@ -92,7 +97,7 @@ const HeroSection = () => {
               opacity: [0.3, 0.6, 0.3],
             }}
             transition={{ repeat: Infinity, duration: 8 }}
-          />
+          /> */}
 
           {/* Shadow */}
           <motion.div

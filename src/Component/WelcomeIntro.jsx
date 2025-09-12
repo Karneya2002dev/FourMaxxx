@@ -1,47 +1,44 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom"; 
+import logo from '../assets/logo.png';
+import Welcome from "./Welcome";
 
 export default function WelcomeIntro() {
   const [collapse, setCollapse] = useState(false);
-  const navigate = useNavigate(); // ✅ Get navigate function
+  const navigate = useNavigate(); 
 
   const handleExplore = () => {
     setCollapse(true);
     setTimeout(() => {
-      navigate("/home"); // ✅ Correct navigation
+      navigate("/home"); 
     }, 2600);
   };
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
-      {/* 🌌 Background Gradient - Medical theme */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#06101d] via-[#5b7fa9] to-[#1167b1]" />
+    <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-[#06101d]">
+      {/* Background Frosted Overlay */}
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-[60px]" />
 
-      {/* 🌫 Glow Orbs */}
-      <div className="absolute inset-0">
-        <div className="absolute w-[700px] h-[700px] bg-[#38BDF8]/20 rounded-full blur-[220px] -top-40 -left-40 animate-pulse" />
-        <div className="absolute w-[600px] h-[600px] bg-[#34D399]/20 rounded-full blur-[220px] bottom-0 right-0 animate-pulse" />
-      </div>
-
-      {/* 💊 Floating Capsules (tumbling pills) */}
+      {/* Floating Capsules */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(12)].map((_, i) => {
           const startX = Math.random() * window.innerWidth;
           const startY = Math.random() * window.innerHeight;
-          const endX = startX + (Math.random() > 0.5 ? 200 : -200); // diagonal drift
+          const endX = startX + (Math.random() > 0.5 ? 200 : -200);
           const endY = startY - 250;
           const delay = Math.random() * 5;
 
           return (
             <motion.div
               key={`capsule-${i}`}
-              className="absolute w-16 h-6 rounded-full"
+              className="absolute w-16 h-6 rounded-full backdrop-blur-sm"
               style={{
-                background: Math.random() > 0.5
-                  ? "linear-gradient(90deg, #38BDF8, #34D399)"
-                  : "linear-gradient(90deg, #34D399, #38BDF8)",
-                boxShadow: "0 0 15px rgba(56,189,248,0.4)",
+                background:
+                  Math.random() > 0.5
+                    ? "linear-gradient(90deg, #2e4a9e, #bb1069)"
+                    : "linear-gradient(90deg, #dd0a7b, #2f4497)",
+                boxShadow: "0 0 20px rgba(255,255,255,0.3)",
               }}
               initial={{ x: startX, y: startY, rotate: 0, opacity: 0.8 }}
               animate={{
@@ -61,7 +58,7 @@ export default function WelcomeIntro() {
         })}
       </div>
 
-      {/* ✨ Animated Sparks (medical blue/green particles) */}
+      {/* Sparks */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(80)].map((_, i) => {
           const startX = Math.random() * window.innerWidth;
@@ -69,9 +66,10 @@ export default function WelcomeIntro() {
           return (
             <motion.div
               key={`spark-${i}`}
-              className="absolute w-[3px] h-[3px] rounded-full shadow-[0_0_8px_rgba(56,189,248,0.9)]"
+              className="absolute w-[3px] h-[3px] rounded-full"
               style={{
-                backgroundColor: Math.random() > 0.5 ? "#38BDF8" : "#34D399",
+                backgroundColor: Math.random() > 0.5 ? "#bb1069" : "#38BDF8",
+                boxShadow: "0 0 12px rgba(255,255,255,0.8)",
               }}
               initial={{ x: startX, y: startY, opacity: 1, scale: 1 }}
               animate={
@@ -82,10 +80,7 @@ export default function WelcomeIntro() {
                       opacity: 0,
                       scale: 0.3,
                     }
-                  : {
-                      y: [startY, startY - 50],
-                      opacity: [0, 1, 0],
-                    }
+                  : { y: [startY, startY - 50], opacity: [0, 1, 0] }
               }
               transition={{
                 duration: collapse ? 2 : 6 + Math.random() * 6,
@@ -97,74 +92,72 @@ export default function WelcomeIntro() {
         })}
       </div>
 
-      {/* 🎨 Capsule Animation on Collapse */}
-      {collapse && (
-        <motion.div
-          className="absolute bg-gradient-to-r from-[#38BDF8] to-[#34D399] shadow-2xl"
-          initial={{
-            width: "100vw",
-            height: "100vh",
-            borderRadius: "0px",
-            opacity: 1,
-          }}
-          animate={{
-            width: "250px",
-            height: "90px",
-            borderRadius: "999px",
-            opacity: [1, 1, 0.9],
-            scale: [1, 1.05, 0.8],
-          }}
-          transition={{
-            duration: 1.5,
-            ease: "easeInOut",
-          }}
+      {/* Landscape Card with Centered Logo */}
+     {/* Landscape / Portrait Responsive Card */}
+{!collapse && (
+  <motion.div
+    className="
+      relative top-20 
+      w-[90%] max-w-[520px] h-[480px]    /* 📱 Portrait for mobile */
+      sm:w-[520px] sm:h-[320px]          /* 💻 Landscape for tablets/desktops */
+      p-[4px] rounded-2xl sm:rounded-3xl z-20
+    "
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1.5 }}
+  >
+    {/* 🔥 Gradient Border Glow */}
+    <motion.div
+      className="absolute inset-0 rounded-2xl sm:rounded-3xl"
+      style={{
+        padding: "4px",
+        background: "linear-gradient(90deg, #2e4a9e, #bb1069, #2e4a9e)",
+        backgroundSize: "200% 200%",
+        filter: "drop-shadow(0 0 25px rgba(187,16,105,0.6))",
+      }}
+      animate={{
+        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "linear",
+      }}
+    >
+      {/* Inner Card */}
+      <div className="h-full w-full rounded-2xl sm:rounded-3xl bg-[#06101d] backdrop-blur-lg flex flex-col items-center justify-center text-white relative z-10 px-4">
+        <motion.img
+          src={logo}
+          alt="FourMax Pharma Logo"
+          className="w-32 sm:w-40 md:w-48 drop-shadow-lg"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 1.5 }}
         />
-      )}
-
-      {/* 💡 Text + Button */}
-      {!collapse && (
-        <motion.div
-          className="absolute w-96 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
+        <motion.button
+          onClick={handleExplore}
+          className="mt-6 sm:mt-4 px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-gradient-to-r from-[#2e4a9e] to-[#bb1069] text-white font-medium shadow-lg hover:shadow-2xl hover:scale-110 transition-transform backdrop-blur-md text-sm sm:text-base"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <motion.h1
-            className="text-4xl md:text-6xl font-light text-white"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 2 }}
-            style={{
-              textShadow: `
-                0 0 15px rgba(56,189,248,0.8),
-                0 0 30px rgba(52,211,153,0.6),
-                0 0 45px rgba(17,94,89,0.5)
-              `,
-            }}
-          >
-            Welcome to FourMax Pharma
-          </motion.h1>
-          <motion.p
-            className="mt-4 text-sm text-teal-200 tracking-wider"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 2 }}
-          >
-            Empowering Health Through Innovation
-          </motion.p>
+          Explore FourMax Pharma
+        </motion.button>
+        <motion.p
+          className="mt-3 text-xs sm:text-sm text-pink-400 tracking-wider text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 2 }}
+        >
+          Empowering Health Through Innovation
+        </motion.p>
+      </div>
+    </motion.div>
+  </motion.div>
+)}
 
-          <motion.button
-            onClick={handleExplore}
-            className="mt-8 px-8 py-3 rounded-full bg-gradient-to-r from-[#38BDF8] to-[#34D399] text-white font-medium shadow-lg hover:shadow-xl hover:scale-110 transition-transform"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Explore FourMax Pharma
-          </motion.button>
-        </motion.div>
-      )}
-
-      {/* ⚡ Flash Effect */}
+     
+ 
+      {/* Flash Effect */}
       {collapse && (
         <motion.div
           className="absolute inset-0 bg-white"
@@ -173,6 +166,12 @@ export default function WelcomeIntro() {
           transition={{ duration: 1, delay: 1.2 }}
         />
       )}
+
+      {/* Welcome Carousel below the card */}
+      <div className="relative w-full mt-30 ">
+        <Welcome />
+      </div>
+
     </section>
   );
 }

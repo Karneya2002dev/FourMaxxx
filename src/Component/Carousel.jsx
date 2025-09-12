@@ -35,13 +35,17 @@ const Carousel = () => {
   const goToProduct = () => navigate(`/products`);
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <motion.div
-        className="absolute inset-0"
-        animate={{ background: ["#e0f7fa", "#b2ebf2", "#80deea", "#e0f7fa"] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      />
+    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#0b0f2a" }}>
+  {/* Or if you want a gradient */}
+  <motion.div
+    className="absolute inset-0"
+    style={{
+      background: "linear-gradient(135deg, #0b0f2a, #1a1f38, #0b0f2a)",
+    }}
+    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+  />
+
 
       {/* Floating DNA / Molecules */}
       {[...Array(10)].map((_, i) => {
@@ -89,16 +93,15 @@ const Carousel = () => {
   {/* Main Heading */}
   <motion.h1
     className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#0f4c81] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
-    animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
-    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
   >
     Explore Our Products
   </motion.h1>
 
   {/* Sub Heading */}
   <motion.h2
-    className="mt-4 text-3xl font-semibold bg-gradient-to-r from-[#0f4c81] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
-    animate={{ y: [0, 5, 0], rotate: [0, -2, 0] }}
+    className="mt-4 text-3xl font-semibold bg-gradient-to-r from-[#ff2fa0] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
+ 
     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
   >
     Innovative Pharma Solutions
@@ -107,7 +110,7 @@ const Carousel = () => {
   {/* Subtext */}
   <motion.p
     className="mt-2 text-lg text-white/80"
-    animate={{ y: [0, 3, 0] }}
+
     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
   >
     Click on a product to learn more

@@ -25,18 +25,18 @@ const Navbar = () => {
   const logoControls = useAnimation();
 
   // Scroll progress effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrollHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      setScrollProgress(progress);
-      setScrolled(scrollTop > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY;
+  //     const scrollHeight =
+  //       document.documentElement.scrollHeight - window.innerHeight;
+  //     const progress = (scrollTop / scrollHeight) * 100;
+  //     setScrollProgress(progress);
+  //     setScrolled(scrollTop > 50);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   // Animation sequence
   useEffect(() => {
@@ -76,7 +76,7 @@ const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-50 flex justify-center"
       >
         {/* Scroll Progress Bar */}
-        <div className="h-1 bg-blue-400 fixed top-0 left-0 w-full z-50">
+        <div className="h-1 fixed top-0 left-0 w-full z-50">
           <div
             className="h-full bg-white transition-all duration-300 ease-linear"
             style={{ width: `${scrollProgress}%` }}

@@ -30,13 +30,14 @@ const HomeScreen = () => {
     <>
       <div className="w-full">
         <Landing />
+         <SectionWrapper>
+        <ImageCarousel />
+      </SectionWrapper>
 
         <Carousel />
       </div>
 
-      <SectionWrapper>
-        <ImageCarousel />
-      </SectionWrapper>
+     
 
       <SectionWrapper>
         <HeroSection />

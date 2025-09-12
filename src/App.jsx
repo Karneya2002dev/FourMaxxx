@@ -13,6 +13,7 @@ import Contact from './Component/Pages/Contact';
 import Events from './Component/Pages/Events';
 import WelcomeIntro from './Component/WelcomeIntro';
 import ProductDetails from './Component/Pages/ProductDetails';
+import ScrollToTop from './Component/ScrollToTop';
 const App = () => {
   return (
   <>
@@ -22,6 +23,7 @@ const App = () => {
 <Footer /> */}
 
 <Layout>
+  <ScrollToTop />
     <Routes>
        <Route path='/' element={<WelcomeIntro />} />
       <Route path='/home' element={<HomeScreen />} />

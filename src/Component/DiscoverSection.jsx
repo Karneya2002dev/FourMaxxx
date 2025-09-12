@@ -75,7 +75,7 @@ const DiscoverSection = () => {
           transition={{ delay: 0.8, duration: 0.7 }}
           className="mt-10"
         >
-          <motion.button
+          {/* <motion.button
             whileHover={{
               scale: 1.1,
               boxShadow: "0px 0px 20px rgba(56, 189, 248, 0.7)",
@@ -84,7 +84,7 @@ const DiscoverSection = () => {
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300"
          onClick={()=>navigate('/products')} >
            Explore Products
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </motion.div>
     </div>
