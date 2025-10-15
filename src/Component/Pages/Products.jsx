@@ -403,7 +403,7 @@ const ProductModal = ({ product, onClose }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black/70 backdrop-blur-lg z-50 flex items-center justify-center p-2 sm:p-4"
+        className="fixed inset-0 bg-black/70 backdrop-blur-lg z-50 flex items-center justify-center p-2 sm:p-4 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -581,7 +581,7 @@ const Product = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
           custom={0}
-          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-6 sm:mb-10 tracking-wide"
+          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-6 sm:mb-10 tracking-wide m-10"
         >
           Our Products
         </motion.h2>

@@ -81,7 +81,7 @@ const Events = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative top-10 overflow-hidden">
       {/* Decorative background shapes */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
