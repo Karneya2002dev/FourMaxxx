@@ -7,6 +7,7 @@ import name from '../assets/name.png';
 
 const shootingOrder = [
   { name: 'HOME', path: '/home' },
+  { name: 'USES OF PRODUCTS', path: '/uses' },
   { name: 'PRODUCTS', path: '/products' },
   { name: 'ABOUT US', path: '/about' },
   { name: 'CAREERS', path: '/carrers' },

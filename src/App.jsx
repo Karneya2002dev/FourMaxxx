@@ -14,6 +14,7 @@ import Events from './Component/Pages/Events';
 import WelcomeIntro from './Component/WelcomeIntro';
 import ProductDetails from './Component/Pages/ProductDetails';
 import ScrollToTop from './Component/ScrollToTop';
+import UsesOfProduct from './Component/Pages/UsesOfProduct';
 const App = () => {
   return (
   <>
@@ -27,6 +28,7 @@ const App = () => {
     <Routes>
        <Route path='/' element={<WelcomeIntro />} />
       <Route path='/home' element={<HomeScreen />} />
+      <Route path='/uses' element={<UsesOfProduct />} />
       <Route path='/products' element={<Product />} />
       <Route path='/about' element={<AboutUs />} />
       <Route path='/carrers' element={<Carrers />} />
