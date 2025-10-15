@@ -162,44 +162,46 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu */}
-          <AnimatePresence>
-            {menuOpen && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="md:hidden overflow-hidden mt-2"
+         {/* Mobile Menu */}
+<AnimatePresence>
+  {menuOpen && (
+    <motion.div
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: 'auto', opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="md:hidden overflow-hidden mt-2 rounded-lg shadow-md bg-white"  // ✅ CHANGED HERE
+    >
+      <div className="flex flex-col px-4 py-3 space-y-3">
+        {shootingOrder.map((link, index) => {
+          const isActive = location.pathname === link.path;
+          return (
+            <motion.div
+              key={link.name}
+              initial={{ x: -30, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <NavLink
+                to={link.path}
+                end={link.path === '/'}
+                onClick={() => setMenuOpen(false)}
+                className={`text-base font-medium transition-colors duration-300 ${
+                  isActive
+                    ? 'text-[#FF0066] font-bold'
+                    : 'text-sky-500 hover:text-purple-400'
+                }`}
               >
-                <div className="flex flex-col px-4 py-3 space-y-3 rounded-lg shadow-md bg-transparent">
-                  {shootingOrder.map((link, index) => {
-                    const isActive = location.pathname === link.path;
-                    return (
-                      <motion.div
-                        key={link.name}
-                        initial={{ x: -30, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: index * 0.05 }}
-                      >
-                        <NavLink
-                          to={link.path}
-                          end={link.path === '/'}
-                          onClick={() => setMenuOpen(false)}
-                          className={`text-base font-medium transition-colors duration-300 ${
-                            isActive
-                              ? 'text-[#FF0066] font-bold'
-                              : 'text-sky-500 hover:text-purple-400'
-                          }`}
-                        >
-                          {link.name}
-                        </NavLink>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                {link.name}
+              </NavLink>
+            </motion.div>
+          );
+        })}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
         </nav>
       </motion.div>
 
