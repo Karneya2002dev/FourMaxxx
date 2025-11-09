@@ -202,6 +202,98 @@ const medicines = [
       },
     ],
   },
+
+
+  {
+  id: "argiflux",
+  name: "Argiflux Sachet",
+  image: "https://i.postimg.cc/1XpZgKXC/Agri.png",
+  fullName: "L-Arginine + L-Glutathione + Proanthocyanidin Granules",
+  description:
+    "Argiflux Sachet is a nutritional and antioxidant formulation used in pregnancy to improve placental blood flow, fetal growth, and amniotic fluid volume. It supports maternal health and helps prevent pregnancy complications associated with uteroplacental insufficiency.",
+  uses: [
+    { title: "Uteroplacental Insufficiency", detail: "Improves placental blood flow and oxygen supply to the fetus." },
+    { title: "Oligohydramnios", detail: "Helps increase amniotic fluid volume." },
+    { title: "Low Birth Weight", detail: "Supports fetal growth and development." },
+    { title: "Gestational Diabetes Mellitus (GDM)", detail: "Supports metabolic health and reduces oxidative stress." },
+    { title: "Preeclampsia", detail: "Helps regulate blood pressure and improve vascular health." },
+    { title: "PIH / IUGR", detail: "Improves fetal perfusion and prevents growth restriction." }
+  ],
+  howItWorks: [
+    {
+      name: "L-Arginine",
+      description:
+        "Boosts Nitric Oxide levels, improves uteroplacental blood flow, and increases amniotic fluid volume while supporting fetal growth."
+    },
+    {
+      name: "L-Glutathione",
+      description:
+        "A powerful antioxidant that protects cells from oxidative stress and enhances the performance of L-Arginine."
+    },
+    {
+      name: "Proanthocyanidin",
+      description:
+        "A potent antioxidant that improves microcirculation, protects vascular tissues, and enhances placental function."
+    }
+  ],
+  extraBenefits: [
+    "Sugar-free",
+    "Orange flavored",
+    "Stable source of Nitric Oxide",
+    "Improves fetal health & growth",
+    "Enhances placental function"
+  ]
+},
+
+{
+  id: "tendoqik4d",
+  name: "Tendo Qik 4D Tablet",
+  image: "https://i.postimg.cc/L6w1DSRV/Tendo-Qik-4-D.jpg",
+  fullName: "Bioactive Collagen Peptide Type I + Rosehip Extract + Sodium Hyaluronate + L-Carnitine + Chondroitin Sulphate + Vitamin C + Vitamin D3 Tablets",
+  description:
+    "Tendo Qik 4D is a comprehensive tendon recovery formula designed for Stage 3 & Stage 4 tendinopathies. It enhances tendon healing, reduces inflammation, improves collagen strength, and prevents recurrence. The 4-Dimensional approach accelerates recovery and restores mobility in chronic tendon injuries.",
+  uses: [
+    { title: "Chronic Tendinopathies", detail: "Recommended for Stage 3 & 4 tendinopathy cases with persistent pain and degeneration." },
+    { title: "Sports Tendon Injuries", detail: "Promotes tendon repair & strengthens ligament structure in athletes." },
+    { title: "Post-Injury Rehabilitation", detail: "Supports recovery following tendon tears and overuse injuries." },
+    { title: "Rotator Cuff & Achilles Tendinopathy", detail: "Boosts collagen formation for shoulder & ankle tendon repair." },
+    { title: "Tennis Elbow / Golfer’s Elbow", detail: "Helps relieve tendon inflammation and improves grip strength." },
+    { title: "Patellar & Plantar Fascia Issues", detail: "Effective in patellar tendinitis and plantar fasciitis recovery." }
+  ],
+
+  howItWorks: [
+    {
+      name: "Bioactive Collagen Peptide Type I",
+      description: "Stimulates tendon fibroblasts, enhances collagen synthesis, and improves tendon tensile strength."
+    },
+    {
+      name: "Rosehip Extract",
+      description: "Provides natural anti-inflammatory action and reduces tendon pain & stiffness."
+    },
+    {
+      name: "Mucopolysaccharide (Sodium Hyaluronate)",
+      description: "Improves tendon elasticity, lubricates tissue, and supports cellular regeneration."
+    },
+    {
+      name: "Chondroitin Sulphate + Vitamin C",
+      description: "Promotes collagen cross-linking, matrix rebuilding, and faster soft tissue healing."
+    },
+    {
+      name: "Vitamin D3",
+      description: "Helps calcium absorption and prevents recurrence by enhancing tendon-bone interface strength."
+    }
+  ],
+
+  extraBenefits: [
+    "4-Dimensional formula for tendon regeneration",
+    "Anti-inflammatory, regenerative, resilient & anti-recurrent action",
+    "Strengthens collagen fibers for long-term tendon health",
+    "Supports elite sports injury recovery",
+    "Reduces stiffness & restores mobility"
+  ]
+}
+
+
 ];
 
 // Collapsible Section Component

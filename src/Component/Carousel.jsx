@@ -35,16 +35,16 @@ const Carousel = () => {
   const goToProduct = () => navigate(`/products`);
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#0b0f2a" }}>
-  {/* Or if you want a gradient */}
+  <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#f5f3ff" }}>
   <motion.div
     className="absolute inset-0"
     style={{
-      background: "linear-gradient(135deg, #0b0f2a, #1a1f38, #0b0f2a)",
+      background: "linear-gradient(135deg, #ede9fe, #c7d2fe, #a5b4fc, #c7d2fe, #ede9fe)",
     }}
     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
   />
+
 
 
       {/* Floating DNA / Molecules */}

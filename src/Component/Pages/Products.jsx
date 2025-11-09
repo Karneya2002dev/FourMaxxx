@@ -252,7 +252,7 @@ const products = [
 
   {
     id: 18,
-    category: "Cardiovascular",
+    category: "Gynecology / Fertility",
     title: "Argiflux",
     description:
       "L-Arginine, Glutathione & Proanthocyanidin – supports fetomaternal circulation and pregnancy health.",

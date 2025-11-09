@@ -22,16 +22,16 @@ const socialIcons = [
     href: 'https://instagram.com/your-handle',
     hoverColor: 'hover:text-[#E1306C]',
   },
-  {
-    icon: <FaFacebookF />,
-    href: 'https://facebook.com/your-page',
-    hoverColor: 'hover:text-[#1877F2]',
-  },
-  {
-    icon: <FaXTwitter />,
-    href: 'https://twitter.com/your-handle',
-    hoverColor: 'hover:text-black',
-  },
+  // {
+  //   icon: <FaFacebookF />,
+  //   href: 'https://facebook.com/your-page',
+  //   hoverColor: 'hover:text-[#1877F2]',
+  // },
+  // {
+  //   icon: <FaXTwitter />,
+  //   href: 'https://twitter.com/your-handle',
+  //   hoverColor: 'hover:text-black',
+  // },
 ];
 
 const Footer = () => {
@@ -89,13 +89,13 @@ const Footer = () => {
             <div className="flex items-center space-x-2 text-sm text-black/90">
               <FaPhoneAlt className="text-blue-600" />
               <a href="tel:+917695943457" className="transition hover:text-blue-600">
-                +91 76959 43457
+                +91 76959 48457
               </a>
             </div>
             <div className="flex items-center space-x-2 text-sm text-black/90">
               <FaEnvelope className="text-blue-600" />
-              <a href="mailto:fourmaxpharma@gmail.com" className="transition hover:text-blue-600">
-                fourmaxpharma@gmail.com
+              <a href=" info@fourmaxpharma.com" className="transition hover:text-blue-600">
+               info@fourmaxpharma.com
               </a>
             </div>
           </div>
