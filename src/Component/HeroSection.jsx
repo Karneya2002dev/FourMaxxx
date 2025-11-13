@@ -64,9 +64,9 @@ const CombinedSection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full min-h-screen text-white overflow-hidden">
-      {/* Background Video */}
-      <video
+    <div className="relative w-full min-h-screen overflow-hidden bg-white text-gray-900">
+      {/* Background Video (optional) */}
+      {/* <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
         loop
@@ -74,13 +74,10 @@ const CombinedSection = () => {
         playsInline
       >
         <source src={bgVideo} type="video/mp4" />
-      </video>
+      </video> */}
 
       {/* Overlay Content */}
-      <div
-        ref={ref}
-        className="relative z-10 px-4 py-16 space-y-32 bg-gradient-to-b from-[#0e1235]/90 to-[#0b0f28]/95"
-      >
+      <div ref={ref} className="relative z-10 px-4 py-16 space-y-32">
         {/* Hero Section */}
         <motion.div
           variants={containerStagger}
@@ -93,20 +90,20 @@ const CombinedSection = () => {
             <motion.h1
               variants={fadeInUp}
               whileHover={{ scale: 1.02 }}
-              className="text-4xl md:text-5xl font-extrabold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-300"
+              className="text-4xl md:text-5xl font-extrabold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"
             >
               Beyond Boundaries, Ahead{' '}
-              <span className="text-blue-400">in Healthcare</span>
+              <span className="text-blue-700">in Healthcare</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-sm sm:text-base text-gray-200 leading-relaxed"
+              className="text-base sm:text-lg text-gray-700 leading-relaxed"
             >
               <strong>We treat</strong> not only symptoms — we care about each person. <br />
               Pharmaceuticals isn’t just evolving—it's revolutionizing how healthcare operates. <br />
-              At <span className="font-semibold text-white">Fourmax Pharmaceuticals</span>, we deliver{' '}
-              <span className="text-purple-300">innovative, reliable, and future-ready solutions</span>.
+              At <span className="font-semibold text-blue-700">Fourmax Pharmaceuticals</span>, we deliver{' '}
+              <span className="text-purple-700">innovative, reliable, and future-ready solutions</span>.
             </motion.p>
 
             <motion.button
@@ -121,18 +118,18 @@ const CombinedSection = () => {
 
             <motion.div
               variants={fadeInUp}
-              className="grid grid-cols-3 gap-4 mt-6 text-center text-sm text-gray-200"
+              className="grid grid-cols-3 gap-4 mt-6 text-center text-sm text-gray-700"
             >
               <div>
-                <p className="text-blue-400 text-xl font-bold">10+</p>
+                <p className="text-blue-700 text-xl font-bold">10+</p>
                 <p>Years of Experience</p>
               </div>
               <div>
-                <p className="text-blue-400 text-xl font-bold">200+</p>
+                <p className="text-blue-700 text-xl font-bold">200+</p>
                 <p>Different Medicines</p>
               </div>
               <div>
-                <p className="text-blue-400 text-xl font-bold">100%</p>
+                <p className="text-blue-700 text-xl font-bold">100%</p>
                 <p>Digital Diagnostics</p>
               </div>
             </motion.div>
@@ -148,7 +145,7 @@ const CombinedSection = () => {
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-              className="relative p-4 rounded-3xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 border border-blue-300 shadow-xl"
+              className="relative p-4 rounded-3xl bg-gradient-to-br from-blue-100 to-purple-100 border border-blue-300 shadow-xl"
             >
               <motion.img
                 src={doctorImg}
@@ -163,7 +160,7 @@ const CombinedSection = () => {
             <motion.div
               animate={{ y: [0, -10, 0], opacity: 1 }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="absolute top-[10%] left-[15%] bg-white text-gray-800 shadow-md px-4 py-1 rounded-full text-sm font-medium z-30"
+              className="absolute top-[10%] left-[15%] bg-blue-50 text-blue-700 shadow-md px-4 py-1 rounded-full text-sm font-medium z-30"
             >
               Reliability
             </motion.div>
@@ -171,7 +168,7 @@ const CombinedSection = () => {
             <motion.div
               animate={{ y: [0, 10, 0], opacity: 1 }}
               transition={{ duration: 2.5, repeat: Infinity }}
-              className="absolute top-[38%] right-[10%] bg-white text-gray-800 shadow-md px-4 py-1 rounded-full text-sm font-medium z-30"
+              className="absolute top-[38%] right-[10%] bg-blue-50 text-blue-700 shadow-md px-4 py-1 rounded-full text-sm font-medium z-30"
             >
               Experience
             </motion.div>
@@ -195,15 +192,15 @@ const CombinedSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-white mb-12 relative inline-block"
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 relative inline-block"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
               What We Do
             </span>
-            <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-blue-300 mt-2 mx-auto rounded-full" />
+            <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mt-2 mx-auto rounded-full" />
           </motion.h2>
 
-          <div className="grid gap-8 md:grid-cols=2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -220,18 +217,18 @@ const CombinedSection = () => {
                 className="relative group rounded-2xl transition-all duration-500"
               >
                 <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 blur-sm transition duration-500" />
-                <div className="relative z-10 bg-[#0e1235]/80 text-white rounded-2xl shadow-xl p-8 h-full flex flex-col justify-between min-h-[360px]">
+                <div className="relative z-10 bg-white text-gray-800 rounded-2xl shadow-xl p-8 h-full flex flex-col justify-between min-h-[360px]">
                   <div>
                     <div className="flex justify-center items-center mb-4">
-                      <div className="bg-white rounded-full p-4 shadow-md">
+                      <div className="bg-blue-50 rounded-full p-4 shadow-md">
                         {service.icon}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-purple-300 mb-2 text-center">
+                    <h3 className="text-xl font-bold text-blue-700 mb-2 text-center">
                       {service.title}
                     </h3>
-                    <div className="h-1 w-10 bg-purple-400 mx-auto mb-4 rounded-full" />
-                    <p className="text-sm text-center text-gray-200">{service.description}</p>
+                    <div className="h-1 w-10 bg-blue-500 mx-auto mb-4 rounded-full" />
+                    <p className="text-sm text-center text-gray-600">{service.description}</p>
                   </div>
                 </div>
               </motion.div>

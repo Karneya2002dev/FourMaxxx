@@ -20,8 +20,8 @@ const products = [
     description:
       "Aceclofenac + Paracetamol – relieves pain and inflammation in musculoskeletal disorders.",
     images: ["https://i.postimg.cc/SK87CsM8/Acpon.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -48,8 +48,8 @@ const products = [
     title: "EC Tap MR",
     description: "Etoricoxib + Thiocolchicoside – arthritis and muscle relaxant therapy.",
     images: ["https://i.postimg.cc/90XG6YNt/EC-Tap-MR.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -75,25 +75,27 @@ const products = [
     description:
       "Collagen peptide, Glucosamine, Chondroitin, Boswellia, Vit D3 – advanced support for osteoarthritis and joint pain.",
     images: ["https://i.postimg.cc/3JRX99G3/Flexma-XX-UC.jpg"],
-    composition:
-      "Collagen Peptide, Glucosamine, Chondroitin, Boswellia Serrata Extract, Vitamin D3",
+    // composition:
+    //   "Collagen Peptide, Glucosamine, Chondroitin, Boswellia Serrata Extract, Vitamin D3",
     fullDescription:
       "OA-CARE UC is a unique formulation that addresses the pain mechanisms in osteoarthritis, including inflammatory pain, neuropathic pain, and degenerative pain, in a comprehensive manner. It is recommended in painful osteoarthritis, neuropathic arthropathy, synovial arthritis, rheumatoid arthritis, trauma and joint injury, as well as in pre-TJR (Total Joint Replacement) preparation and post-TJR rehabilitation.",
     indication: "For the management of osteoarthritis.",
   },
 
-  {
-    id: 7,
-    category: "Orthopedic / Bone Health",
-    title: "Magnes D3",
-    description: "Magnesium Glycine Complex + Vitamin D3 – supports bone strength and muscle function.",
-    images: ["https://i.postimg.cc/L8gzFXv7/Magnes-D3.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
-    fullDescription:
-      "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
-    indication: "For early & recovering tendinopathies.",
-  },
+ {
+  id: 7,
+  category: "Orthopedic / Bone Health",
+  title: "MGCORE-D3",
+  description:
+    "Combination of highly bioavailable Magnesium Glycine Complex with Vitamin D3 – supports bone strength, muscle function, and overall metabolic health.",
+  images: ["https://i.postimg.cc/L8gzFXv7/Magnes-D3.jpg"],
+  composition:
+    "Magnesium Glycine Complex (EQ. TO ELEMENTAL MAGNESIUM) 250MG and Vitamin D3 1000 IU Tablets.",
+  fullDescription:
+    "MGCORE-D3 offers a combination of highly bioavailable magnesium with vitamin D3. It can be used as maintenance therapy or to treat vitamin D insufficiency states associated with musculoskeletal disorders, metabolic diseases, and pregnancy.",
+  indication:
+    "Helps prevent and manage Gestational Diabetes Mellitus (GDM), Pregnancy-induced Hypertension, Leg Cramps, and Vitamin D Deficiency."
+},
 
   {
     id: 8,
@@ -102,8 +104,8 @@ const products = [
     description:
       "Montelukast + Levocetirizine – effective in asthma, allergic rhinitis, and respiratory allergies.",
     images: ["https://i.postimg.cc/q7f2JT57/Montiqik-L.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -115,8 +117,8 @@ const products = [
     description:
       "Myo-Inositol, D-Chiro Inositol, Folate, Vit D3, Chromium, Zinc – PCOS, insulin resistance, and fertility support.",
     images: ["https://i.postimg.cc/gJmRhKdF/OvaFol.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -129,8 +131,8 @@ const products = [
     description:
       "Advanced B-complex with Iron & Zinc – supports anemia, energy, and neurological function.",
     images: ["https://i.postimg.cc/7ZzTQRZr/Tri-B-Max-Total.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -142,8 +144,8 @@ const products = [
     description:
       "Folic Acid, DHA, Vitamins & Minerals – essential formula for pregnancy and fetal development.",
     images: ["https://i.postimg.cc/3wHDMZk4/Tribmax-DHA.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -170,8 +172,8 @@ const products = [
       "Acebrophylline & N-Acetylcysteine – mucolytic and bronchodilator for respiratory care.",
     images: ["https://i.postimg.cc/LszLhbc3/Pulmoact.jpg"],
 
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -197,8 +199,8 @@ const products = [
     description:
       "Rabeprazole Sodium (EC) & Domperidone (SR) – GERD and acid reflux management.",
     images: ["https://i.postimg.cc/D0zXjy8x/Rde-DSR.jpg"],
-    composition:
-      "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
+    // composition:
+    //   "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
