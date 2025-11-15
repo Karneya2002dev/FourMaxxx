@@ -35,88 +35,68 @@ const Carousel = () => {
   const goToProduct = () => navigate(`/products`);
 
   return (
-  <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#f5f3ff" }}>
+  <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: "#ffffff" }}>
+  {/* Floating DNA / Molecules */}
+  {[...Array(10)].map((_, i) => {
+    const size = 30 + Math.random() * 20;
+    return (
+      <motion.div
+        key={i}
+        className="absolute"
+        style={{
+          top: `${Math.random() * 90}vh`,
+          left: `${Math.random() * 90}vw`,
+          rotate: Math.random() * 360,
+        }}
+        animate={{ y: [0, -30, 0], rotate: [0, 360, 0], opacity: [1, 0.6, 1] }}
+        transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Pill size={size} color={logoColors[i % logoColors.length]} />
+      </motion.div>
+    );
+  })}
+
+  {/* Particle Sparks */}
+  {[...Array(30)].map((_, i) => (
+    <motion.div
+      key={i}
+      className="absolute w-[4px] h-[4px] rounded-full"
+      style={{
+        top: `${Math.random() * 100}vh`,
+        left: `${Math.random() * 100}vw`,
+        backgroundColor: logoColors[i % logoColors.length],
+        boxShadow: `0 0 8px ${logoColors[i % logoColors.length]}`,
+      }}
+      animate={{ y: [0, -20, 0], opacity: [0.8, 0.2, 0.8] }}
+      transition={{ duration: 4 + i / 5, repeat: Infinity, ease: "easeInOut" }}
+    />
+  ))}
+
+  {/* Floating Headings */}
   <motion.div
-    className="absolute inset-0"
-    style={{
-      background: "linear-gradient(135deg, #ede9fe, #c7d2fe, #a5b4fc, #c7d2fe, #ede9fe)",
-    }}
-    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-  />
-
-
-
-      {/* Floating DNA / Molecules */}
-      {[...Array(10)].map((_, i) => {
-        const size = 30 + Math.random() * 20;
-        return (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              top: `${Math.random() * 90}vh`,
-              left: `${Math.random() * 90}vw`,
-              rotate: Math.random() * 360,
-            }}
-            animate={{ y: [0, -30, 0], rotate: [0, 360, 0], opacity: [1, 0.6, 1] }}
-            transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Pill size={size} color={logoColors[i % logoColors.length]} />
-          </motion.div>
-        );
-      })}
-
-      {/* Particle Sparks */}
-      {[...Array(30)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-[4px] h-[4px] rounded-full"
-          style={{
-            top: `${Math.random() * 100}vh`,
-            left: `${Math.random() * 100}vw`,
-            backgroundColor: logoColors[i % logoColors.length],
-            boxShadow: `0 0 8px ${logoColors[i % logoColors.length]}`,
-          }}
-          animate={{ y: [0, -20, 0], opacity: [0.8, 0.2, 0.8] }}
-          transition={{ duration: 4 + i / 5, repeat: Infinity, ease: "easeInOut" }}
-        />
-      ))}
-
-     {/* Floating Headings */}
-<motion.div
-  className="absolute w-full flex flex-col items-center justify-center top-16 z-20 pointer-events-none"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 2 }}
->
-  {/* Main Heading */}
-  <motion.h1
-    className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#0f4c81] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
-   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute w-full flex flex-col items-center justify-center top-16 z-20 pointer-events-none"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 2 }}
   >
-    Explore Our Products
-  </motion.h1>
+    <motion.h1
+      className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#0f4c81] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+    >
+      Explore Our Products
+    </motion.h1>
 
-  {/* Sub Heading */}
-  <motion.h2
-    className="mt-4 text-3xl font-semibold bg-gradient-to-r from-[#ff2fa0] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
- 
-    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-  >
-    Innovative Pharma Solutions
-  </motion.h2>
+    <motion.h2
+      className="mt-4 text-3xl font-semibold bg-gradient-to-r from-[#ff2fa0] via-[#1e90ff] to-[#ff2fa0] bg-clip-text text-transparent"
+      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+    >
+      Innovative Pharma Solutions
+    </motion.h2>
 
-  {/* Subtext */}
-  <motion.p
-    className="mt-2 text-lg text-white/80"
-
-    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-  >
-    Click on a product to learn more
-  </motion.p>
-</motion.div>
-
+    <motion.p className="mt-2 text-lg text-gray-700" transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
+      Click on a product to learn more
+    </motion.p>
+  </motion.div>
 
       {/* Carousel */}
       <div className="relative mt-48 flex items-center justify-center z-10">

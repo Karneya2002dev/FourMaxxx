@@ -125,15 +125,23 @@ const Navbar = () => {
           </div>
 
           {/* 📱 Mobile Menu Button */}
-          <div className="md:hidden">
-            <motion.button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className={`text-2xl ${isWelcomePage ? "text-black" : "text-white"}`}
-              whileTap={{ scale: 0.9 }}
-            >
-              {menuOpen ? <HiX /> : <HiMenuAlt3 />}
-            </motion.button>
-          </div>
+          {/* 📱 Mobile Menu Button */}
+<div className="md:hidden">
+  <motion.button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className={`text-2xl ${
+      location.pathname === "/about" || location.pathname === "/events"
+        ? "text-black"
+        : isWelcomePage
+        ? "text-black"
+        : "text-white"
+    }`}
+    whileTap={{ scale: 0.9 }}
+  >
+    {menuOpen ? <HiX /> : <HiMenuAlt3 />}
+  </motion.button>
+</div>
+
         </div>
 
         {/* 📲 Mobile Menu */}
