@@ -23,6 +23,8 @@ const Navbar = () => {
   const location = useLocation();
   const logoControls = useAnimation();
 
+  const isWelcomePage = location.pathname === "/";
+
   // 🌈 Scroll detection for glass background
   useEffect(() => {
     const handleScroll = () => {
@@ -66,10 +68,8 @@ const Navbar = () => {
       <nav
         className={`transition-all duration-700 w-full max-w-[95%] mt-4 rounded-2xl px-4 py-3 border ${
           scrolled
-            ? // 🌈 Glass effect after scroll
-              "backdrop-blur-lg bg-white/10 border-white/20 shadow-[0_8px_32px_rgba(31,38,135,0.37)]"
-            : // ✨ Transparent before scroll
-              "bg-transparent border-transparent"
+            ? "backdrop-blur-lg bg-white/10 border-white/20 shadow-[0_8px_32px_rgba(31,38,135,0.37)]"
+            : "bg-transparent border-transparent"
         }`}
       >
         <div className="flex items-center justify-between gap-x-6">
@@ -107,21 +107,17 @@ const Navbar = () => {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="group relative text-sm font-medium"
                 >
-                  <NavLink to={link.path}>
-                    {isActive ? (
-                      <span>
-                        <span className="text-[#FF0066] font-bold">
-                          {link.name.charAt(0)}
-                        </span>
-                        <span className="text-sky-500 font-bold">
-                          {link.name.slice(1)}
-                        </span>
-                      </span>
-                    ) : (
-                      <span className="text-sky-500 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-500 transition-all duration-300">
-                        {link.name}
-                      </span>
-                    )}
+                  <NavLink
+                    to={link.path}
+                    className={`${
+                      isWelcomePage
+                        ? "text-black hover:text-gray-700"
+                        : isActive
+                        ? "text-[#FF0066] font-bold"
+                        : "text-sky-500 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-500 transition-all duration-300"
+                    }`}
+                  >
+                    {link.name}
                   </NavLink>
                 </motion.div>
               );
@@ -132,7 +128,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <motion.button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white text-2xl"
+              className={`text-2xl ${isWelcomePage ? "text-black" : "text-white"}`}
               whileTap={{ scale: 0.9 }}
             >
               {menuOpen ? <HiX /> : <HiMenuAlt3 />}
@@ -148,7 +144,9 @@ const Navbar = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden mt-2 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg"
+              className={`md:hidden overflow-hidden mt-2 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg ${
+                isWelcomePage ? "bg-white/90" : ""
+              }`}
             >
               <div className="flex flex-col px-4 py-3 space-y-3">
                 {shootingOrder.map((link, index) => {
@@ -164,7 +162,9 @@ const Navbar = () => {
                         to={link.path}
                         onClick={() => setMenuOpen(false)}
                         className={`text-base font-medium ${
-                          isActive
+                          isWelcomePage
+                            ? "text-black hover:text-gray-700"
+                            : isActive
                             ? "text-[#FF0066] font-bold"
                             : "text-sky-400 hover:text-purple-400"
                         }`}
