@@ -79,14 +79,14 @@ const Events = () => {
       img.src = ev.image;
     });
   }, []);
-
+//
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative top-10 overflow-hidden">
+    <section className="py-24  bg-gradient-to-b from-gray-50 via-white to-gray-50 relative  top-0 overflow-hidden">
       {/* Decorative background shapes */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto  px-4 relative z-10">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -117,16 +117,21 @@ const products = [
     indication: "For asthma and allergic rhinitis.",
   },
   {
-    id: 9,
-    category: "Gynecology / Fertility",
-    title: "OvaFol",
-    description:
-      "Myo-Inositol, D-Chiro Inositol, Folate, Vit D3, Chromium, Zinc – PCOS, insulin resistance, and fertility support.",
-    images: ["https://i.postimg.cc/gJmRhKdF/OvaFol.jpg"],
-    fullDescription:
-      "Formulated to support hormonal balance, ovarian health, and insulin sensitivity. Myo-inositol and D-chiro inositol regulate ovulatory function and improve fertility outcomes in women with PCOS.",
-    indication: "For PCOS and fertility enhancement.",
-  },
+  id: 9,
+  category: "Gynecology / Fertility",
+  title: "OvaFol",
+  description:
+    "Myo-Inositol, D-Chiro Inositol, Folate, Vit D3, Chromium, Zinc – PCOS, insulin resistance, and fertility support.",
+  images: ["https://i.postimg.cc/gJmRhKdF/OvaFol.jpg"],
+
+  composition:
+    "Myo-Inositol 550mg, D-Chiro Inositol 13.8mg, L-Methylfolate 100mcg, Vitamin D3 600IU, Chromium 50mcg, Zinc 10mg",
+
+  fullDescription:
+    "Formulated to support hormonal balance, ovarian health, and insulin sensitivity. Myo-inositol and D-chiro inositol regulate ovulatory function and improve fertility outcomes in women with PCOS. Designed to optimize ovulatory functions and support women trying to conceive.",
+
+  indication: "For PCOS, infertility, and fertility enhancement."
+},
   {
     id: 10,
     category: "Hematology / Anemia",
@@ -138,17 +143,24 @@ const products = [
       "A balanced blend of B-complex vitamins with iron and zinc to support red blood cell production, reduce fatigue, and improve neurological health.",
     indication: "For anemia and vitamin deficiency.",
   },
-  {
-    id: 11,
-    category: "Gynecology / Fertility",
-    title: "Tribmax DHA",
-    description:
-      "Folic Acid, DHA, Vitamins & Minerals – essential formula for pregnancy and fetal development.",
-    images: ["https://i.postimg.cc/3wHDMZk4/Tribmax-DHA.jpg"],
-    fullDescription:
-      "Tribmax DHA supports pregnancy and fetal brain development with essential folic acid, DHA, and vitamins to reduce neural tube defect risk and support maternal health.",
-    indication: "For pregnancy support and fetal health.",
-  },
+{
+  id: 11,
+  category: "Gynecology / Fertility",
+  title: "Tribmax DHA",
+
+  description:
+    "Folic Acid, DHA, Vitamins & Minerals – essential formula for pregnancy and fetal development.",
+
+  images: ["https://i.postimg.cc/3wHDMZk4/Tribmax-DHA.jpg"],
+
+  composition:
+    "Calcium Orotate 740mg, Vitamin D3 2000IU, Methylcobalamin 1500mcg, L-Methylfolate Calcium 5mg, Pyridoxal-5-Phosphate 5mg",
+
+  fullDescription:
+    "The best absorbable calcium fortified with Vitamin D3 2000 IU, folic acid, and pyridoxal. These nutrients are essential for maternal nutrition during pregnancy and help reduce homocysteine levels. Supports fetal health, maternal bone strength, and reduces risks of osteoporosis and cardiac issues in adults.",
+
+  indication: "For healthy pregnancy and lactation."
+},
   {
     id: 12,
     category: "Cardiovascular",

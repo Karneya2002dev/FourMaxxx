@@ -1,122 +1,196 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
-import bg from "../assets/Fourmax.jpeg";
+
+// IMPORT BOTH IMAGES  
+import mobileBg from "../assets/mobile.png";      // Mobile version image
+import desktopBg from "../assets/for.png";        // Desktop version image
 
 export default function WelcomeIntro() {
   const navigate = useNavigate();
 
-  const handleExplore = () => {
-    navigate("/home");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  useEffect(() => {
+    // Auto redirect
+    const timer = setTimeout(() => navigate("/home"), 5000);
+
+    // Detect live resize
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [navigate]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.5 }
+    }
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 10 }
+    }
+  };
+
+  const wordVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const circleProgressVariants = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: { duration: 4.5, ease: "easeInOut" }
+    }
   };
 
   return (
     <section
-      className="relative flex items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg})` }}
+      className="
+        relative flex flex-col items-center justify-center min-h-screen 
+        bg-cover bg-center bg-no-repeat px-4 overflow-hidden
+      "
+      style={{
+        backgroundImage: `url(${isMobile ? mobileBg : desktopBg})`
+      }}
     >
-      {/* Subtle Animated Blue Gradient */}
+      {/* Overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-[#d7e6ff]/60 to-[#edf3ff]/40 backdrop-blur-[30px]"
+        className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-800/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.5 }}
       />
 
-      {/* Soft Moving Light Glow */}
+      {/* Glow 1 */}
       <motion.div
-        className="absolute top-1/3 left-1/2 w-[600px] h-[600px] bg-white/40 rounded-full blur-[120px]"
+        className="absolute rounded-full blur-[180px] z-10"
+        style={{
+          width: isMobile ? "300px" : "900px",
+          height: isMobile ? "300px" : "900px",
+          backgroundColor: "rgba(56, 189, 248, 0.30)"
+        }}
         animate={{
-          x: ["-10%", "10%", "-10%"],
-          y: ["-10%", "10%", "-10%"]
+          x: ["-20%", "20%", "-20%"],
+          y: ["-20%", "20%", "-20%"],
+          scale: [0.8, 1.2, 0.8],
+          rotate: [0, 360, 0]
         }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Minimal Floating Molecules */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(15)].map((_, i) => {
-          const x = Math.random() * window.innerWidth;
-          const y = Math.random() * window.innerHeight;
-          const size = Math.random() * 8 + 6;
-
-          return (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-blue-300/30 backdrop-blur-sm"
-              style={{
-                width: size,
-                height: size,
-                top: y,
-                left: x
-              }}
-              animate={{
-                y: [y, y - 40, y],
-                opacity: [0.4, 0.8, 0.4]
-              }}
-              transition={{
-                duration: 6 + Math.random() * 5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          );
-        })}
-      </div>
-
-      {/* Main Card */}
+      {/* Glow 2 */}
       <motion.div
-        className="relative z-20 w-[90%] max-w-[460px] bg-white/80 backdrop-blur-2xl border border-white/70 
-        rounded-3xl p-10 shadow-[0_15px_40px_rgba(0,0,0,0.08)] flex flex-col items-center text-center"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        {/* Logo */}
-        <motion.img
-          src={logo}
-          alt="FourMax Pharma Logo"
-          className="w-36 mb-5 drop-shadow-sm"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2 }}
-        />
+        className="absolute bottom-0 right-0 rounded-full blur-[150px] z-10"
+        style={{
+          width: isMobile ? "200px" : "600px",
+          height: isMobile ? "200px" : "600px",
+          backgroundColor: "rgba(168, 85, 247, 0.25)"
+        }}
+        animate={{
+          x: ["0%", "-30%", "0%"],
+          y: ["0%", "30%", "0%"],
+          scale: [1, 0.7, 1],
+          rotate: [360, 0, 360]
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      />
 
-        {/* Title */}
+      {/* Floating Shapes */}
+      {[...Array(isMobile ? 2 : 6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full"
+          style={{
+            width: `${Math.random() * (isMobile ? 20 : 50) + 15}px`,
+            height: `${Math.random() * (isMobile ? 20 : 50) + 15}px`,
+            backgroundColor: `rgba(255,255,255,${0.1 + Math.random() * 0.2})`,
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`
+          }}
+          animate={{
+            x: `${Math.random() * (isMobile ? 150 : 400) - 100}px`,
+            y: `${Math.random() * (isMobile ? 150 : 400) - 100}px`,
+            scale: [1, 1.2, 1],
+            opacity: [0.5, 1, 0.5],
+            rotate: [0, Math.random() * 360, 0]
+          }}
+          transition={{
+            duration: Math.random() * 10 + 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: Math.random() * 1.5
+          }}
+        />
+      ))}
+
+      {/* Main Content */}
+      <motion.div
+        className="relative z-20 flex flex-col items-center text-center max-w-2xl"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <motion.h1
-          className="text-gray-900 text-xl font-semibold tracking-wide mb-3"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 1.2 }}
+          className="text-white font-extrabold tracking-tight mb-4
+                     text-4xl sm:text-6xl md:text-7xl drop-shadow-2xl"
+          variants={childVariants}
         >
-          Empowering Health Through Innovation
+          {"Future of Health".split(" ").map((word, i) => (
+            <motion.span key={i} className="inline-block mx-2" variants={wordVariants}>
+              {word}
+            </motion.span>
+          ))}
         </motion.h1>
 
-        {/* Subtext */}
         <motion.p
-          className="text-gray-600 text-sm leading-relaxed mb-6 max-w-xs"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 1.3 }}
+          className="text-white text-base sm:text-xl md:text-2xl 
+                     leading-relaxed mb-12 max-w-lg drop-shadow-lg"
+          variants={childVariants}
         >
-          Premium healthcare solutions crafted with scientific precision 
-          and trusted pharmaceutical excellence.
+          Pioneering breakthroughs, delivering care, shaping tomorrow.
         </motion.p>
-
-        {/* Button */}
-        <motion.button
-          onClick={handleExplore}
-          className="px-8 py-3 rounded-full bg-[#0A5AD9] text-white font-medium shadow-md 
-          hover:shadow-lg hover:scale-105 transition-all"
-          whileTap={{ scale: 0.94 }}
-        >
-          Enter FourMax Pharma
-        </motion.button>
       </motion.div>
+
+      {/* Progress Loader */}
+      <div className="absolute bottom-6 sm:bottom-10 z-30">
+        <svg width={isMobile ? "50" : "60"} height={isMobile ? "50" : "60"} viewBox="0 0 60 60">
+          <circle
+            cx="30"
+            cy="30"
+            r="25"
+            stroke="rgba(255,255,255,0.3)"
+            strokeWidth="3"
+            fill="none"
+          />
+          <motion.circle
+            cx="30"
+            cy="30"
+            r="25"
+            stroke="#0A5AD9"
+            strokeWidth="3"
+            fill="none"
+            strokeLinecap="round"
+            transform="rotate(-90 30 30)"
+            variants={circleProgressVariants}
+            initial="hidden"
+            animate="visible"
+          />
+        </svg>
+      </div>
     </section>
   );
 }

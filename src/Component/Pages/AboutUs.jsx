@@ -58,7 +58,7 @@ const About = () => {
   };
 
   return (
-    <section className="bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-16">
+    <section className="bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-16 relative top-5 ">
       {/* Page Title */}
       <div className="text-center mb-12 sm:mb-16">
         <motion.h2
