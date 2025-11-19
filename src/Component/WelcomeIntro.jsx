@@ -48,15 +48,6 @@ export default function WelcomeIntro() {
     visible: { opacity: 1, y: 0 }
   };
 
-  const circleProgressVariants = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: {
-      pathLength: 1,
-      opacity: 1,
-      transition: { duration: 4.5, ease: "easeInOut" }
-    }
-  };
-
   return (
     <section
       className="
@@ -164,33 +155,6 @@ export default function WelcomeIntro() {
           Pioneering breakthroughs, delivering care, shaping tomorrow.
         </motion.p>
       </motion.div>
-
-      {/* Progress Loader */}
-      <div className="absolute bottom-6 sm:bottom-10 z-30">
-        <svg width={isMobile ? "50" : "60"} height={isMobile ? "50" : "60"} viewBox="0 0 60 60">
-          <circle
-            cx="30"
-            cy="30"
-            r="25"
-            stroke="rgba(255,255,255,0.3)"
-            strokeWidth="3"
-            fill="none"
-          />
-          <motion.circle
-            cx="30"
-            cy="30"
-            r="25"
-            stroke="#0A5AD9"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-            transform="rotate(-90 30 30)"
-            variants={circleProgressVariants}
-            initial="hidden"
-            animate="visible"
-          />
-        </svg>
-      </div>
     </section>
   );
 }
