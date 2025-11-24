@@ -75,31 +75,36 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col items-center md:items-end space-y-4">
-            <h3 className="font-semibold text-lg">Contact Us</h3>
-            <div className="flex items-start space-x-2 text-sm text-black/90">
-              <FaMapMarkerAlt className="mt-1 text-blue-600" />
-              <address className="not-italic text-center md:text-right">
-                9-B 1st Floor, Sidco Nagar,<br />
-                Villivakkam, Chennai - 600049,<br />
-                Tamil Nadu, India
-              </address>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-black/90">
-              <FaPhoneAlt className="text-blue-600" />
-              <a href="tel:+917695943457" className="transition hover:text-blue-600">
-                +91 76959 48457
-              </a>
-            </div>
-            <div className="flex items-center space-x-2 text-sm text-black/90">
-              <FaEnvelope className="text-blue-600" />
-              <a href=" info@fourmaxpharma.com" className="transition hover:text-blue-600">
-               info@fourmaxpharma.com
-              </a>
-            </div>
+        {/* Contact Info */}
+        <div className="flex flex-col items-center md:items-end space-y-4">
+<h3 className="font-semibold text-lg">Contact Us</h3>
+
+<div className="flex items-start space-x-2 text-sm text-black/90">
+  <FaMapMarkerAlt className="mt-1 text-blue-600" />
+
+  <address className="not-italic text-center md:text-right leading-relaxed">
+    FOURMAX PHARMA,<br />
+    NO - 9B, SECOND FLOOR,<br />
+    NORTH PERUMAL MAISTRY STREET,<br />
+    MADURAI - 625001<br />
+    {/* TAMILNADU,<br /> INDIA. */}
+  </address>
+</div>
+
+          <div className="flex items-center space-x-2 text-sm text-black/90">
+            <FaPhoneAlt className="text-blue-600" />
+            <a href="tel:+917695943457" className="transition hover:text-blue-600">
+              +91 76959 48457
+            </a>
+          </div>
+          <div className="flex items-center space-x-2 text-sm text-black/90">
+            <FaEnvelope className="text-blue-600" />
+            <a href="mailto:fourmaxpharma@gmail.com" className="transition hover:text-blue-600">
+         fourmaxpharma@gmail.com
+            </a>
           </div>
         </div>
+      </div>
 
         {/* Developed by Marqwon */}
        {/* Developed by Marqwon */}

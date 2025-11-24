@@ -457,16 +457,18 @@ export default function MedicineInfo() {
 
        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 max-w-7xl mx-auto">
   {/* Sidebar */}
-  <nav
-    className="
-      flex sm:flex-col gap-3 sm:gap-4 
-      w-full sm:w-72 
-      bg-white/80 dark:bg-gray-900/70 
-      backdrop-blur-md rounded-2xl p-3 sm:p-5 shadow-lg 
-      overflow-x-auto sm:overflow-y-auto 
-      sm:max-h-[80vh] scrollbar-thin scrollbar-thumb-cyan-500 scrollbar-track-transparent
-    "
-  >
+<nav
+  className="
+    flex sm:flex-col gap-3 sm:gap-4
+    w-full sm:w-72
+    bg-white/80 dark:bg-gray-900/70
+    backdrop-blur-md rounded-2xl p-3 sm:p-5 shadow-lg
+    overflow-x-auto sm:overflow-y-auto
+    sm:max-h-[80vh]
+    scrollbar-hide
+  "
+>
+
     {medicines.map((medicine) => {
       const isActive = medicine.id === activeTab;
       return (
