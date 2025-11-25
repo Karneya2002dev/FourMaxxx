@@ -1,5 +1,4 @@
 import React from 'react'
-
 import HomeScreen from './Component/HomeScreen'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Component/Layout'

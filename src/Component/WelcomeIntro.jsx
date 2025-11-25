@@ -13,7 +13,7 @@ export default function WelcomeIntro() {
 
   useEffect(() => {
     // Auto redirect
-    const timer = setTimeout(() => navigate("/home"), 5000);
+    const timer = setTimeout(() => navigate("/home"), 2000);
 
     // Detect live resize
     const handleResize = () => setIsMobile(window.innerWidth < 640);

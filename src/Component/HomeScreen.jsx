@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Carousel from './Carousel'
 import ImageCarousel from './ImageCarousel'
 import HeroSection from './HeroSection'
 import WhatWeDoSection from './WhatWeDoSection'
@@ -25,7 +24,7 @@ const SectionWrapper = ({ children }) => {
 
 const HomeScreen = () => {
   const carouselRef = useRef(null);
-  const isInView = useInView(carouselRef, { once: true, margin: "-100px" });
+  const isInView = useInView(carouselRef, { once: true,  });
   return (
     <>
       <div className="w-full">
@@ -34,7 +33,7 @@ const HomeScreen = () => {
         <ImageCarousel />
       </SectionWrapper>
 
-        <Carousel />
+        {/* <Carousel /> */}
       </div>
 
      

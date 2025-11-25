@@ -385,7 +385,7 @@ export default function MedicineInfo() {
       <motion.div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(135deg, #0b0f2a, #1a1f38, #0b0f2a)",
+          background: "",
           zIndex: 0,
         }}
         animate={{
@@ -443,13 +443,13 @@ export default function MedicineInfo() {
       {/* Foreground Content */}
       <div className="relative z-10 px-4 sm:px-10 py-20 ">
         {/* Header */}
-        <header className="text-center mb-10">
+        <header className="text-center mb-10 mt-4">
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Medicine Information Portal
             </span>
           </h1>
-          <p className="mt-3 text-base sm:text-lg text-cyan-100">
+          <p className="mt-3 text-base sm:text-lg text-cyan-500">
             Explore detailed insights about our prescribed medicines
           </p>
           <div className="mt-5 mx-auto w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
