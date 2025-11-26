@@ -26,7 +26,7 @@ const products = [
     title: "Tendo Qik",
     description:
       "Collagen Peptide Type I, Sodium Hyaluronate, Chondroitin Sulfate, Vitamin C – supportive tendon recovery formula.",
-    images: ["https://i.postimg.cc/L6w1DSRV/Tendo-Qik-4-D.jpg"],
+    images: ["https://i.postimg.cc/28VWnyp6/Tendo-Qik.jpg"],
     composition:
       "Collagen Peptide Type I - 40MG, Sodium Hyaluronate - 30MG, Chondroitin Sulfate - 200MG, Vitamin C - 12.5MG Tablets.",
     fullDescription:
@@ -40,6 +40,7 @@ const products = [
     description:
       "Aceclofenac + Paracetamol – relieves pain and inflammation in musculoskeletal disorders.",
     images: ["https://i.postimg.cc/SK87CsM8/Acpon.jpg"],
+     composition:"Aceclofenac 100MG, Paracetamol 325MG Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -64,6 +65,7 @@ const products = [
     title: "EC Tap MR",
     description: "Etoricoxib + Thiocolchicoside – arthritis and muscle relaxant therapy.",
     images: ["https://i.postimg.cc/90XG6YNt/EC-Tap-MR.jpg"],
+     composition:"Etoricoxib 60MG, Thiocolchicoside 4MG MR Tablets.",
     fullDescription:
       "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
     indication: "For early & recovering tendinopathies.",
@@ -86,7 +88,9 @@ const products = [
   category: "Orthopedic / Joint Health",
   title: "FlexmaXX UC",
   images: ["https://i.postimg.cc/3JRX99G3/Flexma-XX-UC.jpg"],
-  composition:"",
+composition:
+  "Undenaturated collagen peptide type 11 - 40mg, Sodium hyaluronate - 80mg, Rosehip Extract - 375mg, Glucosamine sulphate - 750mg, Methyl Sulphanyl Methane - 250mg, Chondroitin sulphate - 200mg, Boswellia serrata Extract - 200mg, Vitamin D3 - 600IU Tablets",
+
   fullDescription:
     "FlexmaXX UC is a unique product, which takes care of the pain mechanism in osteoarthritis like inflammatory pain, neuropathic pain and degenerative pain in a comprehensive manner. Recommended in painful osteoarthritis, neuropathic arthropathy, synovial arthritis, rheumatoid arthritis, trauma and joint injury, Pre-TJR preparation, and Post-TJR rehabilitation.",
   indication: "FOR THE MANAGEMENT OF OSTEOARTHRITIS"
@@ -112,10 +116,10 @@ const products = [
     category: "Respiratory",
     title: "MontiQik-L",
     description:
-      "Montelukast + Levocetirizine – effective in asthma, allergic rhinitis, and respiratory allergies.",
+      "MontiQik-L – effective in asthma, allergic rhinitis, and respiratory allergies.",
     images: ["https://i.postimg.cc/q7f2JT57/Montiqik-L.jpg"],
     fullDescription:
-      "Montelukast and Levocetirizine provide dual-action allergy relief—reducing airway inflammation and histamine reactions. Effective in asthma, allergic rhinitis, and respiratory allergies.",
+      "MontiQik-L provide dual-action allergy relief—reducing airway inflammation and histamine reactions. Effective in asthma, allergic rhinitis, and respiratory allergies.",
     indication: "For asthma and allergic rhinitis.",
   },
   {
@@ -127,7 +131,7 @@ const products = [
   images: ["https://i.postimg.cc/gJmRhKdF/OvaFol.jpg"],
 
   composition:
-    "Myo-Inositol 550mg, D-Chiro Inositol 13.8mg, L-Methylfolate 100mcg, Vitamin D3 600IU, Chromium 50mcg, Zinc 10mg",
+    "Myo-Inositol 1000mg, D-Chiro Inositol 25mg, L-Methylfolate 100mcg, Vitamin D3 1000IU, Chromium 100mcg, Zinc 10mg",
 
   fullDescription:
     "Formulated to support hormonal balance, ovarian health, and insulin sensitivity. Myo-inositol and D-chiro inositol regulate ovulatory function and improve fertility outcomes in women with PCOS. Designed to optimize ovulatory functions and support women trying to conceive.",
@@ -135,28 +139,34 @@ const products = [
   indication: "For PCOS, infertility, and fertility enhancement."
 },
   {
-    id: 10,
-    category: "Hematology / Anemia",
-    title: "Tri B Max Total",
-    description:
-      "Advanced B-complex with Iron & Zinc – supports anemia, energy, and neurological function.",
-    images: ["https://i.postimg.cc/7ZzTQRZr/Tri-B-Max-Total.jpg"],
-    fullDescription:
-      "A balanced blend of B-complex vitamins with iron and zinc to support red blood cell production, reduce fatigue, and improve neurological health.",
-    indication: "For anemia and vitamin deficiency.",
-  },
+  id: 10,
+  category: "Hematology / Anemia",
+  title: "Tri B Max Total",
+  description:
+    "Advanced B-complex with Iron & Zinc – supports anemia, energy, and neurological function.",
+  images: ["https://i.postimg.cc/7ZzTQRZr/Tri-B-Max-Total.jpg"],
+
+  // Full long description (screenshot content)
+  composition:
+    "Calcium Orotate 740MG, Vitamin D3 2000IU, Methylcobalamin 1500MCG, L-Methylfolate Calcium 5MG and Pyridoxal 5-Phosphate 5MG Tablets",
+
+  fullDescription:
+    "The best absorbable calcium fortified with vitamin D3 2000 IU and folic acid and pyridoxal which are essential for maternal nutrition during pregnancy and to reduce homocysteine in other individuals. Supports fetal health during pregnancy and prevents cardiac risks and osteoporosis in other adults.",
+
+  indication:
+    "For healthy pregnancy and lactation.",
+}
+,
 {
   id: 11,
   category: "Gynecology / Fertility",
   title: "Tribmax DHA",
-
   description:
     "Folic Acid, DHA, Vitamins & Minerals – essential formula for pregnancy and fetal development.",
+    images: ["https://i.postimg.cc/3wHDMZk4/Tribmax-DHA.jpg"],
 
-  images: ["https://i.postimg.cc/3wHDMZk4/Tribmax-DHA.jpg"],
-
-  composition:
-    "Calcium Orotate 740mg, Vitamin D3 2000IU, Methylcobalamin 1500mcg, L-Methylfolate Calcium 5mg, Pyridoxal-5-Phosphate 5mg",
+ composition:
+  "L-Methylfolate 1mg, Cyanocobalamin 2.2mg, Pyridoxal 5 Phosphate 35mg, DHA 200mg Softgel",
 
   fullDescription:
     "The best absorbable calcium fortified with Vitamin D3 2000 IU, folic acid, and pyridoxal. These nutrients are essential for maternal nutrition during pregnancy and help reduce homocysteine levels. Supports fetal health, maternal bone strength, and reduces risks of osteoporosis and cardiac issues in adults.",
@@ -176,7 +186,7 @@ const products = [
     "VFite is a soft gelatin capsule of Natural Extracts, Omega-3 Fatty Acids, Essential Vitamins, Trace Elements, Essential Amino Acids, Minerals, Probiotic with Bio-availability enhancers.",
 
   fullDescription:
-    "VFite-5G is a comprehensive formulation that tackles vitamin and mineral deficiencies in adults, specifically in patients with dietary restrictions, such as diabetes mellitus. Piperine in VFite is a Bio-Enhancer and improves absorption of micronutrients, improving efficacy. VFite is effective in vertigo and tinnitus associated with vestibular disorders, which are very common in elderly population, due to its highly bioavailable ginkgo biloba.",
+    "VFite-5G is a comprehensive formulation that tackles vitamin and mineral deficiencies in adults, specifically in patients with dietary restrictions, such as diabetes mellitus. Piperine in VFite-5G is a Bio-Enhancer and improves absorption of micronutrients, improving efficacy. VFite-5G is effective in vertigo and tinnitus associated with vestibular disorders, which are very common in elderly population, due to its highly bioavailable ginkgo biloba.",
 
   indication: "For post-surgical & general weakness."
 },
@@ -188,6 +198,7 @@ const products = [
     description:
       "Acebrophylline & N-Acetylcysteine – mucolytic and bronchodilator for respiratory care.",
     images: ["https://i.postimg.cc/LszLhbc3/Pulmoact.jpg"],
+    composition:"Acebrophylline and N-Acetylcysteine",
     fullDescription:
       "Combination of Acebrophylline and N-Acetylcysteine helps in mucus clearance and bronchodilation, improving breathing in chronic respiratory disorders.",
     indication: "For asthma and bronchitis management.",
@@ -212,6 +223,9 @@ const products = [
     description:
       "Rabeprazole Sodium (EC) & Domperidone (SR) – GERD and acid reflux management.",
     images: ["https://i.postimg.cc/D0zXjy8x/Rde-DSR.jpg"],
+    composition:
+  "Rabeprazole EC 20mg + Domperidone 30mg SR Capsules",
+
     fullDescription:
       "A dual-action formula to reduce gastric acid and improve motility in GERD and acid reflux, ensuring faster symptom relief and long-lasting control.",
     indication: "For GERD and acid reflux.",
@@ -235,13 +249,14 @@ const products = [
     title: "Tendo Qik 4D",
     description:
       "Fortified formula with Collagen, Rosehip, Hyaluronate, L-Carnitine, Chondroitin, Vitamin C & D3 – designed for toughest tendinopathies.",
-    images: ["https://i.postimg.cc/28VWnyp6/Tendo-Qik.jpg"],
+    images: [" https://i.postimg.cc/L6w1DSRV/Tendo-Qik-4-D.jpg"],
+   
     composition:
       "Bioactive Collagen Peptide Type I: 40MG, Mucopolysaccharide Polysulphate: 220MG, Rosehip Extract: 375MG, Sodium Hyaluronate: 30MG, L-Carnitine: 500MG, Chondroitin Sulphate: 200MG, Ascorbic Acid: 35MG, Cholecalciferol (Vitamin D3): 1000 IU",
     fullDescription:
       "A unique combination of collagen peptides, mucopolysaccharides, rosehip, hyaluronate, L-carnitine, chondroitin, vitamin C, and vitamin D3 to support tendon health and repair. Designed for challenging tendon recovery cases.",
     indication:
-      "For stage III tendinopathies and challenging tendon recovery cases.",
+      "For stage III tendinopathies.",
   },
   {
     id: 18,

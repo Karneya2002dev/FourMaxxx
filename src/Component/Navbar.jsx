@@ -58,6 +58,15 @@ const Navbar = () => {
     sequence();
   }, [logoControls]);
 
+  // 🎨 NEW LOGIC — Toggle icon should turn black whenever background is white
+  const needsBlackMenuIcon =
+    scrolled ||
+    menuOpen ||
+    location.pathname === "/uses" || // Uses of products page
+    location.pathname === "/about" ||
+    location.pathname === "/events" ||
+    location.pathname === "/products";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -30 }}
@@ -125,23 +134,17 @@ const Navbar = () => {
           </div>
 
           {/* 📱 Mobile Menu Button */}
-          {/* 📱 Mobile Menu Button */}
-<div className="md:hidden">
-  <motion.button
-    onClick={() => setMenuOpen(!menuOpen)}
-    className={`text-2xl ${
-      location.pathname === "/about" || location.pathname === "/events"
-        ? "text-black"
-        : isWelcomePage
-        ? "text-black"
-        : "text-white"
-    }`}
-    whileTap={{ scale: 0.9 }}
-  >
-    {menuOpen ? <HiX /> : <HiMenuAlt3 />}
-  </motion.button>
-</div>
-
+          <div className="md:hidden">
+            <motion.button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className={`text-3xl transition ${
+                needsBlackMenuIcon ? "text-black" : "text-white"
+              }`}
+              whileTap={{ scale: 0.9 }}
+            >
+              {menuOpen ? <HiX /> : <HiMenuAlt3 />}
+            </motion.button>
+          </div>
         </div>
 
         {/* 📲 Mobile Menu */}
@@ -152,9 +155,7 @@ const Navbar = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className={`md:hidden overflow-hidden mt-2 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg ${
-                isWelcomePage ? "bg-white/90" : ""
-              }`}
+              className="md:hidden overflow-hidden mt-2 rounded-xl bg-white/90 backdrop-blur-lg border border-white/20 shadow-lg"
             >
               <div className="flex flex-col px-4 py-3 space-y-3">
                 {shootingOrder.map((link, index) => {
@@ -170,11 +171,9 @@ const Navbar = () => {
                         to={link.path}
                         onClick={() => setMenuOpen(false)}
                         className={`text-base font-medium ${
-                          isWelcomePage
-                            ? "text-black hover:text-gray-700"
-                            : isActive
+                          isActive
                             ? "text-[#FF0066] font-bold"
-                            : "text-sky-400 hover:text-purple-400"
+                            : "text-black hover:text-gray-600"
                         }`}
                       >
                         {link.name}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 // IMPORT BOTH IMAGES  
-import mobileBg from "../assets/forrr.png";      // Mobile version image
+import mobileBg from "../assets/mobileee.png";      // Mobile version image
 import desktopBg from "../assets/for.png";        // Desktop version image
 
 export default function WelcomeIntro() {

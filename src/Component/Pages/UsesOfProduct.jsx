@@ -159,7 +159,7 @@ const medicines = [
   {
     id: "spaztap",
     name: "Spaztap Tablet",
-    image: "https://i.postimg.cc/3x3Qz8mK/Spaztap.jpg",
+    image: "https://i.postimg.cc/J0dB9VXM/Spaz-Tap.jpg",
     fullName: "Aceclofenac + Paracetamol + Thiocolchicoside",
     description:
       "Spaztap Tablet is a combination medicine used for pain relief and muscle relaxation. It helps reduce inflammation, fever, and muscle stiffness associated with musculoskeletal and joint conditions such as back pain, arthritis, and muscle spasms.",

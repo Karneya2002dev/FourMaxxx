@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Mail, Phone, User, FileText } from "lucide-react";
+import { Award, ShieldCheck, Wallet } from "lucide-react";
 
 const jobList = [
   {
@@ -32,11 +33,26 @@ const jobList = [
   },
 ];
 
+
+
 const highlights = [
-  { icon: "🏆", title: "Award Winning", description: "Recognized for excellence in pharmaceutical innovation." },
-  { icon: "💼", title: "Well Allowance", description: "Comprehensive benefits and allowances for employees." },
-  { icon: "🛡️", title: "Full Insurance", description: "Health insurance coverage for all team members." },
+  { 
+    icon: <Award className="text-pink-600 w-10 h-10" />, 
+    title: "Award Winning", 
+    description: "Recognized for excellence in pharmaceutical innovation." 
+  },
+  { 
+    icon: <Wallet className="text-blue-600 w-10 h-10" />, 
+    title: "Well Allowance", 
+    description: "Comprehensive benefits and allowances for employees." 
+  },
+  { 
+    icon: <ShieldCheck className="text-green-600 w-10 h-10" />, 
+    title: "Full Insurance", 
+    description: "Health insurance coverage for all team members." 
+  },
 ];
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
