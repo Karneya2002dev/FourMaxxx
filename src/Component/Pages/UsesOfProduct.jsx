@@ -158,7 +158,7 @@ const medicines = [
 
   {
     id: "spaztap",
-    name: "Spaztap Tablet",
+    name: "Spaztap",
     image: "https://i.postimg.cc/J0dB9VXM/Spaz-Tap.jpg",
     fullName: "Aceclofenac + Paracetamol + Thiocolchicoside",
     description:
@@ -206,7 +206,7 @@ const medicines = [
 
   {
   id: "argiflux",
-  name: "Argiflux Sachet",
+  name: "Argiflux ",
   image: "https://i.postimg.cc/1XpZgKXC/Agri.png",
   fullName: "L-Arginine + L-Glutathione + Proanthocyanidin Granules",
   description:
@@ -247,7 +247,7 @@ const medicines = [
 
 {
   id: "tendoqik4d",
-  name: "Tendo Qik 4D Tablet",
+  name: "Tendo Qik 4D",
   image: "https://i.postimg.cc/L6w1DSRV/Tendo-Qik-4-D.jpg",
   fullName: "Bioactive Collagen Peptide Type I + Rosehip Extract + Sodium Hyaluronate + L-Carnitine + Chondroitin Sulphate + Vitamin C + Vitamin D3 Tablets",
   description:
@@ -399,47 +399,7 @@ export default function MedicineInfo() {
       />
 
       {/* Floating Capsules */}
-      {[...Array(10)].map((_, i) => {
-        const size = 30 + Math.random() * 25;
-        return (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              top: `${Math.random() * 90}vh`,
-              left: `${Math.random() * 90}vw`,
-              rotate: Math.random() * 360,
-              zIndex: 1,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              rotate: [0, 360, 0],
-              opacity: [1, 0.5, 1],
-            }}
-            transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Pill size={size} color={logoColors[i % logoColors.length]} />
-          </motion.div>
-        );
-      })}
-
-      {/* Particle Sparks */}
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-[4px] h-[4px] rounded-full"
-          style={{
-            top: `${Math.random() * 100}vh`,
-            left: `${Math.random() * 100}vw`,
-            backgroundColor: logoColors[i % logoColors.length],
-            boxShadow: `0 0 8px ${logoColors[i % logoColors.length]}`,
-            zIndex: 1,
-          }}
-          animate={{ y: [0, -20, 0], opacity: [0.8, 0.2, 0.8] }}
-          transition={{ duration: 4 + i / 5, repeat: Infinity, ease: "easeInOut" }}
-        />
-      ))}
-
+     
       {/* Foreground Content */}
       <div className="relative z-10 px-4 sm:px-10 py-20 ">
         {/* Header */}
@@ -455,58 +415,56 @@ export default function MedicineInfo() {
           <div className="mt-5 mx-auto w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
         </header>
 
-       <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 max-w-7xl mx-auto">
-  {/* Sidebar */}
-<nav
-  className="
-    flex sm:flex-col gap-3 sm:gap-4
-    w-full sm:w-72
-    bg-white/80 dark:bg-gray-900/70
-    backdrop-blur-md rounded-2xl p-3 sm:p-5 shadow-lg
-    overflow-x-auto sm:overflow-y-auto
-    sm:max-h-[80vh]
-    scrollbar-hide
-  "
->
-
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 max-w-7xl mx-auto px-3 sm:px-5">
+  
+  {/* Sidebar / Mobile Tab Scroll */}
+  <nav
+    className="
+      flex lg:flex-col gap-2 lg:gap-4 w-full lg:w-72
+      bg-white/80 dark:bg-gray-900/70 backdrop-blur-md
+      rounded-xl p-2 sm:p-4 shadow-md
+      overflow-x-auto lg:overflow-y-auto
+      scrollbar-hide
+    "
+  >
     {medicines.map((medicine) => {
       const isActive = medicine.id === activeTab;
       return (
-       <button
-  key={medicine.id}
-  onClick={() => setActiveTab(medicine.id)}
-  className={`
-    flex flex-col sm:flex-row justify-center items-center 
-    gap-2 sm:gap-3 
-    px-5 sm:px-4 py-4 sm:py-3 
-    rounded-xl text-sm sm:text-base font-semibold text-center
-    whitespace-nowrap transition-all duration-300 w-full
-    ${
-      isActive
-        ? "bg-cyan-600 text-white shadow-md scale-[1.03]"
-        : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-cyan-500 hover:text-white"
-    }
-  `}
->
-  <img
-    src={medicine.image}
-    alt={medicine.name}
-    className="w-10 h-10 sm:w-10 sm:h-10 object-contain rounded-lg"
-  />
-  <span className="text-center">{medicine.name}</span>
-</button>
-
+                <button
+          key={medicine.id}
+          onClick={() => setActiveTab(medicine.id)}
+          className={`
+            flex items-center gap-3 min-w-max lg:min-w-0
+            px-4 py-2 sm:px-5 sm:py-3 rounded-xl font-semibold
+            transition-all duration-300 shadow-sm
+            ${
+              isActive
+                ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white scale-105 shadow-lg"
+                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-cyan-200/50 dark:hover:bg-gray-700"
+            }
+          `}
+        >
+          <img
+            src={medicine.image}
+            alt={medicine.name}
+            className="w-10 h-10 object-contain rounded-lg border border-gray-300"
+          />
+          <span className="text-sm sm:text-base">{medicine.name}</span>
+        </button>
       );
     })}
   </nav>
 
-  {/* Main Content */}
-  <main className="flex-grow">
-    <MedicineTabContent medicine={medicines.find((m) => m.id === activeTab)} />
+  {/* Content Area */}
+  <main className="flex-1">
+    <MedicineTabContent
+      medicine={medicines.find((m) => m.id === activeTab)}
+    />
   </main>
 </div>
-
       </div>
     </div>
   );
 }
+
+ 
