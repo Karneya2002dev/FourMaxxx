@@ -112,16 +112,18 @@ composition:
       "Helps prevent and manage Gestational Diabetes Mellitus (GDM), Pregnancy-induced Hypertension, Leg Cramps, and Vitamin D Deficiency.",
   },
   {
-    id: 8,
-    category: "Respiratory",
-    title: "MontiQik-L",
-    description:
-      "MontiQik-L – effective in asthma, allergic rhinitis, and respiratory allergies.",
-    images: ["https://i.postimg.cc/q7f2JT57/Montiqik-L.jpg"],
-    fullDescription:
-      "MontiQik-L provide dual-action allergy relief—reducing airway inflammation and histamine reactions. Effective in asthma, allergic rhinitis, and respiratory allergies.",
-    indication: "For asthma and allergic rhinitis.",
-  },
+  id: 8,
+  category: "Respiratory",
+  title: "MontiQik-L",
+  description:
+    "MontiQik-L – effective in asthma, allergic rhinitis, and respiratory allergies.",
+  images: ["https://i.postimg.cc/q7f2JT57/Montiqik-L.jpg"],
+  fullDescription:
+    "MontiQik-L provides dual-action allergy relief—reducing airway inflammation and histamine reactions. Effective in asthma, allergic rhinitis, and respiratory allergies.",
+  indication: "For asthma and allergic rhinitis.",
+  composition: "Levocetirizine 5 mg + Montelukast 10 mg"
+},
+
   {
   id: 9,
   category: "Gynecology / Fertility",
