@@ -36,14 +36,26 @@ const slideIn = (direction = "left") => ({
 
 /* ------------------ EXAMPLE PRODUCTS ------------------ */
 const products = [
-  "Collagen Peptides",
-  "Vitamin C Complex",
-  "Joint Health Supplement",
-  "Calcium + Vitamin D",
-  "Iron & Folic Acid",
-  "Omega 3 Capsules",
-  "Multivitamin Tablets",
+  { id: 1, title: "Tendo Qik" },
+  { id: 2, title: "Acpon" },
+  { id: 3, title: "Cisqtrix" },
+  { id: 4, title: "EC Tap MR" },
+  { id: 5, title: "Ferzi Plus" },
+  { id: 6, title: "FlexmaXX UC" },
+  { id: 7, title: "Gynac Magnes D3" },
+  { id: 8, title: "MontiQik-L" },
+  { id: 9, title: "OvaFol" },
+  { id:10, title: "Tri B Max Total" },
+  { id:11, title: "Tribmax DHA" },
+  { id:12, title: "VFite 5G" },
+  { id:13, title: "Pulmoact" },
+  { id:14, title: "Qikzyme" },
+  { id:15, title: "Rde DSR" },
+  { id:16, title: "Spaz Tap" },
+  { id:17, title: "Tendo Qik 4D" },
+  { id:18, title: "Argiflux" },
 ];
+
 
 const Contact = () => {
   return (
@@ -115,24 +127,31 @@ const Contact = () => {
               ))}
 
               {/* Product Selection */}
-              <motion.div variants={fadeInUp} custom={4}>
-                <label className="text-gray-200 text-sm font-medium mb-1">
-                  Product Interested
-                </label>
-                <div className="relative">
-                  <select className="w-full p-3 pr-10 rounded-lg bg-white/10 border border-white/30 text-white focus:ring-2 focus:ring-purple-400 outline-none appearance-none">
-                    <option value="">Select a product</option>
-                    {products.map((p, index) => (
-                      <option key={index} value={p} className="text-black">
-                        {p}
-                      </option>
-                    ))}
-                  </select>
-                  <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-white text-xs">
-                    ▼
-                  </span>
-                </div>
-              </motion.div>
+           <motion.div variants={fadeInUp} custom={4}>
+  <label className="block text-sm font-medium mb-2 text-white">
+    Product Interested
+  </label>
+
+  <div className="relative">
+    <select
+      className="w-full appearance-none p-3 rounded-lg bg-white/10 text-white font-medium
+                 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500
+                 focus:border-blue-500 transition-all duration-300"
+    >
+      <option value="">Select a product</option>
+      {products.map((item) => (
+        <option key={item.id} value={item.title}>
+          {item.title}
+        </option>
+      ))}
+    </select>
+
+    <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-white text-sm">
+      ▼
+    </span>
+  </div>
+</motion.div>
+
 
               {/* Message Type */}
               <motion.div variants={fadeInUp} custom={5}>

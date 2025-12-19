@@ -53,3 +53,13 @@
     scrollbar-width: none;  /* Firefox */
   }
 }
+
+
+select option {
+  color: black !important;
+}
+
+@theme {
+  --breakpoint-xs: 480px;
+}
+

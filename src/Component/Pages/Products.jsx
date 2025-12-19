@@ -53,9 +53,9 @@ const products = [
       "Cisqtrix, Calcium Orotate, Calcitriol, Vitamin K2-7 – unique bone health & fracture healing support.",
     images: ["https://i.postimg.cc/NGb81Z5N/Cisqtrix.jpg"],
     composition:
-      "Cisqtrix  Extract 500MG, Calcium Orotate 740MG, Calcitriol 0.25MCG, Vitamin K2-7 45MCG.",
+      "Cissus Quadrangularis Extract 500MG, Calcium Orotate 740MG, Calcitriol 0.25MCG, Vitamin K2-7 45MCG.",
     fullDescription:
-      "Cisqtrix is a unique formulation combining multiple bone-health nutrients:\n\n- **Cisqtrix Extract** – helps reduce pain, swelling, and fracture mobility.\n- **Calcium Orotate** – reduces fracture risk and strengthens bone.\n- **Calcitriol** – helps treat and prevent low calcium levels and bone disease in geriatric patients.\n- **Vitamin K2-7** – supports bone mineralization and increases bone mass.\n\nThis synergistic blend promotes bone healing, reduces fracture complications, and enhances long-term skeletal strength.",
+      "Cisqtrix is a unique formulation combining multiple bone-health nutrients:\n\n- **Cissus Quadrangularis Extract** – helps reduce pain, swelling, and fracture mobility.\n- **Calcium Orotate** – reduces fracture risk and strengthens bone.\n- **Calcitriol** – helps treat and prevent low calcium levels and bone disease in geriatric patients.\n- **Vitamin K2-7** – supports bone mineralization and increases bone mass.\n\nThis synergistic blend promotes bone healing, reduces fracture complications, and enhances long-term skeletal strength.",
     indication:
       "Osteoporosis, Post-menopausal osteoporosis, Osteopenia, and Fracture healing.",
   },
@@ -100,14 +100,14 @@ composition:
   {
     id: 7,
     category: "Orthopedic / Bone Health",
-    title: "Gynac Magnes D3",
+    title: "Mangnes D3",
     description:
       "Combination of highly bioavailable Magnesium Glycine Complex with Vitamin D3 – supports bone strength, muscle function, and overall metabolic health.",
     images: ["https://i.postimg.cc/L8gzFXv7/Magnes-D3.jpg"],
     composition:
-      "Magnesium Glycine Complex (EQ. TO ELEMENTAL MAGNESIUM) 250MG and Vitamin D3 1000 IU Tablets.",
+      "Magnesium 420MG,Pyriodoxal 5'-Phosphate-2mg,Riboflavin-1mg and Vitamin D3-600 IU Tablets",
     fullDescription:
-      "Gynac Magnes D3 offers a combination of highly bioavailable magnesium with vitamin D3. It can be used as maintenance therapy or to treat vitamin D insufficiency states associated with musculoskeletal disorders, metabolic diseases, and pregnancy.",
+      "Magnes D3 offers a combination of highly bioavailable magnesium with vitamin D3. It can be used as maintenance therapy or to treat vitamin D insufficiency states associated with musculoskeletal disorders, metabolic diseases, and pregnancy.",
     indication:
       "Helps prevent and manage Gestational Diabetes Mellitus (GDM), Pregnancy-induced Hypertension, Leg Cramps, and Vitamin D Deficiency.",
   },
@@ -171,7 +171,7 @@ composition:
   "L-Methylfolate 1mg, Cyanocobalamin 2.2mg, Pyridoxal 5 Phosphate 35mg, DHA 200mg Softgel",
 
   fullDescription:
-    "The best absorbable calcium fortified with Vitamin D3 2000 IU, folic acid, and pyridoxal. These nutrients are essential for maternal nutrition during pregnancy and help reduce homocysteine levels. Supports fetal health, maternal bone strength, and reduces risks of osteoporosis and cardiac issues in adults.",
+    "Advanced highly absorbable calcium form Orotate & vitamin D3. prevent issues like osteoporosis by enhancing calcium absorption.",
 
   indication: "For healthy pregnancy and lactation."
 },
@@ -453,16 +453,10 @@ const ProductModal = ({ product, onClose }) => {
           </div>
 
           {/* 📄 Info Section */}
-          <div className="p-4 sm:p-6 flex flex-col my-2 justify-center space-y-3 sm:space-y-4 overflow-y-auto max-h-[80vh]">
-            <motion.h2
-              className="text-lg sm:text-2xl font-bold text-gray-900 text-center md:text-left  relative top-5"
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              custom={0}
-            >
-              {product.title}
-            </motion.h2>
+        <div className="p-5 sm:p-8 flex flex-col justify-start space-y-4 overflow-y-auto max-h-[50vh] md:max-h-[85vh]">
+  <motion.h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+    {product.title}
+  </motion.h2>
 
             <motion.p
               className="text-xs sm:text-sm text-gray-500 text-center md:text-left"
@@ -511,14 +505,11 @@ const ProductModal = ({ product, onClose }) => {
               </motion.div>
             )}
                <button
-        onClick={() => {
-          onClose(); // close modal first
-          navigate("/contact", { state: { product } }); 
-        }}
-        className="px-7 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow-md transition mt-4"
-      >
-        Enquiry
-      </button>
+    onClick={() => { onClose(); navigate("/contact", { state: { product } }); }}
+    className="w-full md:w-max px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl shadow-lg transition-all active:scale-95"
+  >
+    Enquiry Now
+  </button>
           </div>
     
 
