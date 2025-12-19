@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import doctor1 from "../../assets/docanimi.png";
-import doctor2 from "../../assets/docanimi.png";
+import doctor2 from "../../assets/girldoctor.jpg";
 import doctor3 from "../../assets/docanimi.png";
 
 const fadeIn = {
