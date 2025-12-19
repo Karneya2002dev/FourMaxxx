@@ -34,17 +34,18 @@ const products = [
     indication: "For early & recovering tendinopathies.",
   },
   {
-    id: 2,
-    category: "Pain / Musculoskeletal",
-    title: "Acpon",
-    description:
-      "Aceclofenac + Paracetamol – relieves pain and inflammation in musculoskeletal disorders.",
-    images: ["https://i.postimg.cc/SK87CsM8/Acpon.jpg"],
-     composition:"Aceclofenac 100MG, Paracetamol 325MG Tablets.",
-    fullDescription:
-      "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
-    indication: "For early & recovering tendinopathies.",
-  },
+  id: 2,
+  category: "Pain / Musculoskeletal",
+  title: "Acpon",
+  description:
+    "Aceclofenac + Paracetamol – provides effective relief from pain, inflammation, and fever associated with musculoskeletal conditions.",
+  images: ["https://i.postimg.cc/SK87CsM8/Acpon.jpg"],
+  composition: "Aceclofenac 100 mg, Paracetamol 325 mg Tablets.",
+  fullDescription:
+    "Acpon combines aceclofenac, a non-steroidal anti-inflammatory drug (NSAID), with paracetamol, an analgesic and antipyretic. This combination works by reducing the production of pain- and inflammation-causing prostaglandins, helping to relieve pain, swelling, stiffness, and fever. It is commonly prescribed for conditions such as arthritis, back pain, muscle pain, joint pain, sprains, and other musculoskeletal disorders.",
+  indication:
+    "For relief of pain, inflammation, and fever in musculoskeletal and joint disorders.",
+},
   {
     id: 3,
     category: "Orthopedic / Bone Health",
@@ -60,16 +61,19 @@ const products = [
       "Osteoporosis, Post-menopausal osteoporosis, Osteopenia, and Fracture healing.",
   },
   {
-    id: 4,
-    category: "Pain / Musculoskeletal",
-    title: "EC Tap MR",
-    description: "Etoricoxib + Thiocolchicoside – arthritis and muscle relaxant therapy.",
-    images: ["https://i.postimg.cc/90XG6YNt/EC-Tap-MR.jpg"],
-     composition:"Etoricoxib 60MG, Thiocolchicoside 4MG MR Tablets.",
-    fullDescription:
-      "Collagen Peptide type I, Sodium Hyaluronate, Chondroitin Sulfate may help support tendon recovery from degenerative tendinopathies. This supportive action in degenerative tendinopathies in early & recovering tendinopathies may help movement and relieve discomfort.",
-    indication: "For early & recovering tendinopathies.",
-  },
+  id: 4,
+  category: "Pain / Musculoskeletal",
+  title: "EC Tap MR",
+  description:
+    "Etoricoxib + Thiocolchicoside – helps relieve pain, inflammation, and muscle spasms in musculoskeletal conditions.",
+  images: ["https://i.postimg.cc/90XG6YNt/EC-Tap-MR.jpg"],
+  composition: "Etoricoxib 60 mg, Thiocolchicoside 4 mg MR Tablets.",
+  fullDescription:
+    "EC Tap MR combines etoricoxib, a selective COX-2 inhibitor that reduces pain and inflammation, with thiocolchicoside, a muscle relaxant that helps relieve muscle stiffness and spasms. This dual-action formulation is effective in managing painful musculoskeletal conditions by reducing inflammation while improving muscle relaxation, thereby enhancing mobility and comfort.",
+  indication:
+    "For the management of pain, inflammation, and muscle spasms associated with musculoskeletal and joint disorders such as arthritis, back pain, neck pain, and muscle strain.",
+},
+
   {
     id: 5,
     category: "Hematology / Anemia",
@@ -145,20 +149,18 @@ composition:
   category: "Hematology / Anemia",
   title: "Tri B Max Total",
   description:
-    "Advanced B-complex with Iron & Zinc – supports anemia, energy, and neurological function.",
+    "L-Methylfolate, Methylcobalamin & Pyridoxal-5-Phosphate with Vitamin D3 – supports anemia management, pregnancy nutrition, and neurological health.",
   images: ["https://i.postimg.cc/7ZzTQRZr/Tri-B-Max-Total.jpg"],
 
-  // Full long description (screenshot content)
   composition:
-    "Calcium Orotate 740MG, Vitamin D3 2000IU, Methylcobalamin 1500MCG, L-Methylfolate Calcium 5MG and Pyridoxal 5-Phosphate 5MG Tablets",
+    "Calcium Orotate 740 mg, Vitamin D3 2000 IU, Methylcobalamin 1500 mcg, L-Methylfolate Calcium 5 mg, Pyridoxal-5-Phosphate 5 mg Tablets",
 
   fullDescription:
-    "The best absorbable calcium fortified with vitamin D3 2000 IU and folic acid and pyridoxal which are essential for maternal nutrition during pregnancy and to reduce homocysteine in other individuals. Supports fetal health during pregnancy and prevents cardiac risks and osteoporosis in other adults.",
+    "Tri B Max Total is a comprehensive nutritional formulation containing active forms of folate (L-methylfolate), vitamin B12 (methylcobalamin), and vitamin B6 (pyridoxal-5-phosphate), along with vitamin D3 and calcium orotate. These bioactive vitamins support red blood cell formation, help reduce homocysteine levels, and promote neurological and cognitive health. During pregnancy, the formulation supports fetal neural development and maternal nutritional needs, while in other adults it helps prevent anemia, supports bone health, and reduces cardiovascular and neurological risk associated with vitamin deficiencies.",
 
   indication:
-    "For healthy pregnancy and lactation.",
-}
-,
+    "For management of anemia, nutritional support during pregnancy and lactation, and maintenance of neurological and metabolic health.",
+},
 {
   id: 11,
   category: "Gynecology / Fertility",
