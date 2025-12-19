@@ -85,14 +85,14 @@ const products = [
  {
   id: 7,
   category: "Orthopedic / Bone Health",
-  title: "MGCORE-D3",
+  title: "Mangnes D3",
   description:
     "Combination of highly bioavailable Magnesium Glycine Complex with Vitamin D3 – supports bone strength, muscle function, and overall metabolic health.",
-  images: ["https://i.postimg.cc/L8gzFXv7/Magnes-D3.jpg"],
+  images: ["https://i.ibb.co/fzYf1LPR/magnesd3updated.jpg"],
   composition:
     "Magnesium Glycine Complex (EQ. TO ELEMENTAL MAGNESIUM) 250MG and Vitamin D3 1000 IU Tablets.",
   fullDescription:
-    "MGCORE-D3 offers a combination of highly bioavailable magnesium with vitamin D3. It can be used as maintenance therapy or to treat vitamin D insufficiency states associated with musculoskeletal disorders, metabolic diseases, and pregnancy.",
+    "Mangnes-D3 offers a combination of highly bioavailable magnesium with vitamin D3. It can be used as maintenance therapy or to treat vitamin D insufficiency states associated with musculoskeletal disorders, metabolic diseases, and pregnancy.",
   indication:
     "Helps prevent and manage Gestational Diabetes Mellitus (GDM), Pregnancy-induced Hypertension, Leg Cramps, and Vitamin D Deficiency."
 },

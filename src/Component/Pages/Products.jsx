@@ -103,7 +103,7 @@ composition:
     title: "Mangnes D3",
     description:
       "Combination of highly bioavailable Magnesium Glycine Complex with Vitamin D3 – supports bone strength, muscle function, and overall metabolic health.",
-    images: ["https://i.postimg.cc/L8gzFXv7/Magnes-D3.jpg"],
+    images: ["https://i.ibb.co/fzYf1LPR/magnesd3updated.jpg"],
     composition:
       "Magnesium 420MG,Pyriodoxal 5'-Phosphate-2mg,Riboflavin-1mg and Vitamin D3-600 IU Tablets",
     fullDescription:
