@@ -18,24 +18,24 @@ const fadeIn = {
 const sections = [
   {
     name: "C. PRABU",
-    role: "Managing Director",
-    desc: "C. Prabu brings over 20 years of pharmaceutical industry experience to Fourmax...",
+    role: "Executive Director – Sales & Marketing",
+    desc: "Mr. C. Prabu brings over 20 years of extensive experience in pharmaceutical sales and marketing, driving strategic growth and market expansion.",
     image: doctor1,
-    reverse: false, // doctor right
+    reverse: false, // image right
   },
   {
-    name: "DR. SARAH JOHNSON",
-    role: "Head of Research",
-    desc: "Leading groundbreaking research in pharmaceutical sciences for over 15 years.",
+    name: "INDHUMATHI R",
+    role: "Executive Director – HR, Finance & Accounts",
+    desc: "Ms. Indhumathi R oversees human resources, finance, and accounts, ensuring operational efficiency, compliance, and organizational excellence.",
     image: doctor2,
-    reverse: true, // doctor left
+    reverse: true, // image left
   },
   {
-    name: "MICHAEL LEE",
-    role: "Chief Operations Officer",
-    desc: "Ensuring smooth global operations with efficiency and excellence.",
+    name: "POONGKOTHAI S",
+    role: "RVP (PMD) – Administration & Product Management",
+    desc: "Ms. Poongkothai S leads product management and administration, focusing on product strategy, lifecycle management, and internal operations.",
     image: doctor3,
-    reverse: false, // doctor right again
+    reverse: false, // image right
   },
 ];
 
